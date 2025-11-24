@@ -16,7 +16,9 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
+# Tenta carregar .env padrão e .env.local (para pegar chaves NEXT_PUBLIC)
 load_dotenv()
+load_dotenv(Path(__file__).parents[4] / "site-web" / ".env.local")
 
 if 'SUMO_HOME' in os.environ:
     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
@@ -42,11 +44,14 @@ from tcc_sumo.utils.helpers import get_logger, setup_logging, ensure_sumo_home, 
 setup_logging()
 logger = get_logger("ScenarioGeneratorAPI")
 
-SB_URL = os.getenv("SUPABASE_URL")
-SB_KEY = os.getenv("SUPABASE_KEY")
+# Tenta pegar variáveis padrão ou as do Next.js
+SB_URL = os.getenv("SUPABASE_URL") or os.getenv("NEXT_PUBLIC_SUPABASE_URL")
+SB_KEY = os.getenv("SUPABASE_KEY") or os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
+
 REPO_NAME = "RoHenPe/plataforma-trafego-web"
 REPO_MAP_PATH = "public/maps/api_mapa_validacao.html"
-WEB_PLATFORM_PATH = PROJECT_ROOT.parent / "rohenpe/plataforma-trafego-web/RoHenPe-plataforma-trafego-web-41ccc66874af228613cf7a2473b2caf94ef0e0c2/public/maps"
+# Ajuste este caminho se necessário para apontar para a pasta 'public/maps' do seu site
+WEB_PLATFORM_PATH = PROJECT_ROOT.parent / "site-web/public/maps" 
 
 class ScenarioGeneratorAPI:
     def __init__(self, config: dict):
@@ -71,8 +76,11 @@ class ScenarioGeneratorAPI:
                 return mac
 
     def generate(self, input_file_name, num_vehicles, duration):
-        logger.info("=== GERAÇÃO API (UPDATED) ===")
+        logger.info("=== GERAÇÃO API (DYNAMIC MAP) ===")
         
+        if not SB_URL or not SB_KEY:
+            logger.warning("Supabase credentials not found. Map sync will fail.")
+
         self._clear_database()
         
         base_file = PROJECT_ROOT / "scenarios" / "base_files" / input_file_name
@@ -103,7 +111,7 @@ class ScenarioGeneratorAPI:
         self._write_detectors(output_dir / "detectors.add.xml")
         
         local_html = validation_dir / "api_mapa_validacao.html"
-        self._gen_web_map_supabase(lat, lon, bbox, roads_data, local_html)
+        self._gen_web_map_dynamic(lat, lon, bbox, roads_data, local_html)
         
         self._deploy_local(local_html)
         self._upload_to_github(local_html)
@@ -123,9 +131,15 @@ class ScenarioGeneratorAPI:
         except: pass
 
     def _deploy_local(self, source):
-        if WEB_PLATFORM_PATH.exists():
-            try: shutil.copy2(source, WEB_PLATFORM_PATH / "api_mapa_validacao.html")
-            except: pass
+        # Garante que o diretório de destino existe
+        if WEB_PLATFORM_PATH.parent.exists():
+            if not WEB_PLATFORM_PATH.exists():
+                WEB_PLATFORM_PATH.mkdir(parents=True)
+            try: 
+                shutil.copy2(source, WEB_PLATFORM_PATH / "api_mapa_validacao.html")
+                logger.info(f"Mapa copiado para: {WEB_PLATFORM_PATH}")
+            except Exception as e:
+                logger.warning(f"Falha ao copiar mapa local: {e}")
 
     def _upload_to_github(self, local_path):
         if not HAS_GITHUB: return
@@ -137,10 +151,11 @@ class ScenarioGeneratorAPI:
             with open(local_path, 'r', encoding='utf-8') as f: content = f.read()
             try:
                 c = repo.get_contents(REPO_MAP_PATH)
-                repo.update_file(c.path, "Update Map", content, c.sha)
+                repo.update_file(c.path, "Update Map via API", content, c.sha)
             except:
-                repo.create_file(REPO_MAP_PATH, "Create Map", content)
-        except: pass
+                repo.create_file(REPO_MAP_PATH, "Create Map via API", content)
+        except Exception as e:
+            logger.error(f"GitHub Upload Error: {e}")
 
     def _run_db_sync(self):
         sync = PROJECT_ROOT / "src" / "sync_db.py"
@@ -265,9 +280,14 @@ class ScenarioGeneratorAPI:
 
             self.device_manifest.append({
                 "source": "from_api",
-                "sumo_id": tid, "id": tls_mac, "type": "traffic_control_unit",
-                "camera": {"id": cam_mac, "status": "active", "source": "from_api"},
+                "sumo_id": tid, "id": tls_mac, "type": "SEMAFARO",
                 "geo": {"lat": lat, "lon": lon}, "status": "active"
+            })
+            self.device_manifest.append({
+                "source": "from_api",
+                "sumo_id": None, "id": cam_mac, "type": "CAMERA",
+                "geo": {"lat": lat + 0.0001, "lon": lon + 0.0001},
+                "status": "active", "linked_to": tls_mac
             })
 
         visuals = []
@@ -301,18 +321,15 @@ class ScenarioGeneratorAPI:
                 f.write(f' <e2Detector id="{d["id"]}" lane="{d["lane"]}" pos="{d["pos"]:.2f}" length="{d["len"]:.2f}" file="traffic.xml" freq="60"/>\n')
             f.write("</additional>")
 
-    def _gen_web_map_supabase(self, lat, lon, bbox, roads, fp):
+    def _gen_web_map_dynamic(self, lat, lon, bbox, roads, fp):
+        """Gera HTML com Leaflet + Supabase para leitura em tempo real."""
+        
         lines = []
         for r in roads:
             pts = ",".join([f"[{p[0]},{p[1]}]" for p in r['p']])
             lines.append(f"L.polyline([{pts}], {{color:'{r['s']['c']}', weight:{r['s']['w']}, opacity:{r['s']['o']}, lineCap:'round'}}).addTo(map);")
 
-        markers_data = []
-        for i, d in enumerate(self.device_manifest):
-            pop = f"""<div class='elegant-card' id='card-{d['id']}'><div class='card-top'><div class='icon-circle'><span class='material-icons'>traffic</span></div><div class='header-text'><div class='card-title'>Traffic Light</div><div class='card-subtitle'>{d['id']}</div></div><div class='status-indicator' id='status-dot-{d['id']}'></div></div><div class='card-split'></div><div class='card-bottom'><div class='data-row'><span class='material-icons row-icon'>videocam</span><div class='row-content'><div class='row-label'>Camera</div><div class='row-value'>{d['camera']['id']}</div></div></div><div class='copy-row'><span class='copy-label'>STATUS:</span><span class='copy-val' id='status-text-{d['id']}'>Loading...</span></div></div></div>"""
-            markers_data.append({'lat': d['geo']['lat'], 'lon': d['geo']['lon'], 'pop': pop, 'mac': d['id']})
-
-        html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Monitoramento API</title>
+        html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Mapa F.org</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
@@ -322,84 +339,132 @@ class ScenarioGeneratorAPI:
 <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Icons&display=swap" rel="stylesheet">
 <style>
-  body {{ margin:0; font-family:'Inter', sans-serif; background:#f4f4f4; overflow:hidden; }} #map {{ width:100vw; height:100vh; }}
-  .elegant-card {{ width: 260px; background: #ffffff; border-radius: 16px; overflow: hidden; font-family: 'Inter', sans-serif; }}
-  .card-top {{ padding: 16px 20px; display: flex; align-items: center; background: #ffffff; }}
-  .icon-circle {{ width: 40px; height: 40px; background: #f0f2f5; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 12px; color: #333; }}
-  .header-text {{ flex: 1; }}
-  .card-title {{ font-size: 14px; font-weight: 700; color: #111; }}
-  .card-subtitle {{ font-size: 12px; color: #666; font-weight: 500; font-family: monospace; letter-spacing: 0.5px; margin-top: 2px; }}
-  .status-indicator {{ width: 12px; height: 12px; border-radius: 50%; background: #ccc; box-shadow: 0 0 0 2px white; }}
-  .status-indicator.active {{ background: #10b981; }} .status-indicator.inactive {{ background: #ef4444; }} .status-indicator.maintenance {{ background: #f59e0b; }}
-  .card-split {{ height: 1px; background: #f0f0f0; margin: 0 20px; }}
-  .card-bottom {{ padding: 16px 20px; background: #ffffff; }}
-  .data-row {{ display: flex; align-items: flex-start; margin-bottom: 16px; }}
-  .row-icon {{ font-size: 20px; color: #9ca3af; margin-right: 12px; margin-top: 2px; }}
-  .row-content {{ display: flex; flex-direction: column; }}
-  .row-label {{ font-size: 11px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }}
-  .row-value {{ font-size: 13px; color: #374151; font-weight: 500; font-family: monospace; margin-top: 2px; }}
-  .copy-row {{ margin-top: 12px; padding-top: 12px; border-top: 1px dashed #eee; font-size: 10px; color: #999; display: flex; justify-content: space-between; }}
-  .copy-val {{ font-family: monospace; color: #555; font-weight: bold; text-transform: uppercase; }}
-  .pin-dot {{ width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.2); background: #ef4444; transition: background 0.3s; }}
-  .pin-dot.active {{ background: #10b981; }} .pin-dot.maintenance {{ background: #f59e0b; }}
-  .pin-wrap {{ display: flex; justify-content: center; align-items: center; }}
-  .legend {{ position: absolute; bottom: 24px; left: 24px; z-index: 1000; background: rgba(255,255,255,0.95); padding: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 160px; }}
-  .l-item {{ display: flex; align-items: center; margin-bottom: 8px; font-size: 12px; color: #444; font-weight: 500; }}
+  body {{ margin:0; font-family:'Inter', sans-serif; background:#f8fafc; overflow:hidden; }} 
+  #map {{ width:100vw; height:100vh; }}
+  
+  /* Cards Estilizados */
+  .elegant-card {{ width: 240px; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }}
+  .card-header {{ padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }}
+  .card-type {{ font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; }}
+  .card-status {{ width: 10px; height: 10px; border-radius: 50%; }}
+  
+  .card-body {{ padding: 16px; }}
+  .card-mac {{ font-family: monospace; font-size: 14px; font-weight: 600; color: #334155; margin-bottom: 8px; display: block; }}
+  .card-coords {{ font-size: 11px; color: #94a3b8; display: flex; gap: 8px; }}
+  
+  /* Legenda */
+  .legend {{ position: absolute; bottom: 24px; right: 24px; z-index: 1000; background: rgba(255,255,255,0.95); padding: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 140px; }}
+  .l-item {{ display: flex; align-items: center; margin-bottom: 8px; font-size: 12px; color: #475569; font-weight: 500; }}
   .dot {{ width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; }}
+  
+  /* Ícones no Mapa */
+  .marker-pin {{ width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: 2px solid white; }}
+  .marker-pin span {{ font-size: 18px; }}
+  
+  /* Cores de Status */
+  .bg-active {{ background-color: #10b981; }}
+  .bg-inactive {{ background-color: #ef4444; }}
+  .bg-maintenance {{ background-color: #f59e0b; }}
+  .text-active {{ color: #10b981; }}
+  
 </style></head><body><div id="map"></div>
+
 <div class="legend">
-<div style="margin-bottom:10px;font-weight:700;color:#111">Legenda (API)</div>
-<div class="l-item"><div class="dot" style="background:#B3261E"></div>Rodovia</div>
-<div class="l-item"><div class="dot" style="background:#2E7D32"></div>Primária</div>
-<div class="l-item"><div class="dot" style="background:#F9A825"></div>Secundária</div>
-<div class="l-item"><div class="dot" style="background:#E0E0E0"></div>Outros</div>
-<div class="l-item" style="margin-top:8px"><div class="dot" style="background:#10b981;border:1px solid #ddd"></div>Ativo</div>
-<div class="l-item"><div class="dot" style="background:#ef4444;border:1px solid #ddd"></div>Inativo</div>
-<div class="l-item"><div class="dot" style="background:#f59e0b;border:1px solid #ddd"></div>Manutenção</div>
+  <div style="margin-bottom:10px;font-weight:700;color:#1e293b">Legenda</div>
+  <div class="l-item"><div class="dot" style="background:#10b981"></div>Ativo</div>
+  <div class="l-item"><div class="dot" style="background:#ef4444"></div>Inativo</div>
+  <div class="l-item"><div class="dot" style="background:#f59e0b"></div>Manutenção</div>
+  <div style="margin: 8px 0; height:1px; background:#e2e8f0"></div>
+  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#3b82f6">videocam</span>Câmera</div>
+  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#8b5cf6">traffic</span>Semáforo</div>
 </div>
+
 <script>
 const supabaseUrl = '{SB_URL}'; const supabaseKey = '{SB_KEY}';
+if (!supabaseUrl || !supabaseKey || supabaseUrl === 'None' || supabaseKey === 'None') {{
+    alert('Erro: Chaves do Supabase não configuradas no servidor Python. O mapa não sincronizará.');
+}}
 const client = supabase.createClient(supabaseUrl, supabaseKey);
-var map=L.map('map',{{zoomControl:false}}).setView([{lat},{lon}],14);
-L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png',{{subdomains:'abcd',maxZoom:20}}).addTo(map);
-L.control.zoom({{position:'topright'}}).addTo(map);
+
+// Inicializa o mapa
+var map = L.map('map', {{ zoomControl: false }}).setView([{lat}, {lon}], 14);
+L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
+    subdomains: 'abcd', maxZoom: 20
+}}).addTo(map);
+L.control.zoom({{ position: 'topright' }}).addTo(map);
+
+// Desenha as ruas (fixas do cenário)
 {chr(10).join(lines)}
+
+// Cluster de marcadores
 var markers = L.markerClusterGroup({{
-    showCoverageOnHover: false, zoomToBoundsOnClick: true, spiderfyOnMaxZoom: true, maxClusterRadius: 45,
-    iconCreateFunction: function(cluster) {{
-        return L.divIcon({{ html: '<div style="background:#333;color:white;border-radius:50%;width:32px;height:32px;display:flex;justify-content:center;align-items:center;font-weight:bold;border:3px solid white;font-size:12px;box-shadow:0 4px 8px rgba(0,0,0,0.15)">' + cluster.getChildCount() + '</div>', className: 'cluster-icon', iconSize: [36, 36] }});
-    }}
-}});
-var data = {json.dumps(markers_data)};
-data.forEach(function(d) {{
-    var icon = L.divIcon({{ className: 'pin-wrap', html: `<div class='pin-dot' id='pin-${{d.mac}}'></div>`, iconSize: [16, 16], iconAnchor: [8, 8] }});
-    var m = L.marker([d.lat, d.lon], {{icon: icon}});
-    m.bindPopup(d.pop, {{closeButton: false, minWidth: 260}});
-    markers.addLayer(m);
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: true,
+    spiderfyOnMaxZoom: true,
+    maxClusterRadius: 40
 }});
 map.addLayer(markers);
-map.fitBounds([[{bbox[0]},{bbox[1]}],[{bbox[2]},{bbox[3]}]], {{padding:[60,60]}});
-async function syncStatus() {{
-    const {{ data, error }} = await client.from('dispositivos').select('mac_address, status');
-    if (!error && data) {{
-        data.forEach(dev => {{
-            const mac = dev.mac_address;
-            const status = dev.status || 'active';
-            const dot = document.getElementById(`status-dot-${{mac}}`);
-            const txt = document.getElementById(`status-text-${{mac}}`);
-            if (dot) dot.className = `status-indicator ${{status}}`;
-            if (txt) {{
-                txt.innerText = status.toUpperCase();
-                txt.style.color = (status === 'active') ? '#10b981' : ((status === 'maintenance') ? '#f59e0b' : '#ef4444');
-            }}
-            const pin = document.getElementById(`pin-${{mac}}`);
-            if (pin) pin.className = `pin-dot ${{status}}`;
+
+// Função principal: Busca dispositivos do Banco e desenha no mapa
+async function loadDevices() {{
+    const {{ data, error }} = await client
+        .from('dispositivos')
+        .select('id, mac_address, tipo, status, latitude, longitude');
+
+    if (error) {{ console.error('Erro ao buscar dispositivos:', error); return; }}
+    if (!data) return;
+
+    // Limpa marcadores antigos para redesenhar
+    markers.clearLayers();
+
+    data.forEach(dev => {{
+        if (!dev.latitude || !dev.longitude) return;
+
+        // Define ícone e cor baseada no tipo e status
+        let iconName = (dev.tipo === 'CAMERA') ? 'videocam' : 'traffic';
+        let bgColor = (dev.tipo === 'CAMERA') ? '#3b82f6' : '#8b5cf6'; // Azul ou Roxo
+        
+        // Status altera a borda ou indicador? Vamos usar status para cor do 'dot' no popup
+        let statusColorClass = 'bg-active';
+        if (dev.status === 'inactive') statusColorClass = 'bg-inactive';
+        if (dev.status === 'maintenance') statusColorClass = 'bg-maintenance';
+
+        const customIcon = L.divIcon({{
+            className: 'custom-pin',
+            html: `<div class="marker-pin" style="background-color: ${{bgColor}}"><span class="material-icons">${{iconName}}</span></div>`,
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
         }});
-    }}
+
+        const popupContent = `
+            <div class="elegant-card">
+                <div class="card-header">
+                    <span class="card-type">${{dev.tipo}}</span>
+                    <div class="card-status ${{statusColorClass}}"></div>
+                </div>
+                <div class="card-body">
+                    <span class="card-mac">${{dev.mac_address}}</span>
+                    <div class="card-coords">
+                        <span>Lat: ${{dev.latitude.toFixed(4)}}</span>
+                        <span>Lon: ${{dev.longitude.toFixed(4)}}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        const m = L.marker([dev.latitude, dev.longitude], {{ icon: customIcon }});
+        m.bindPopup(popupContent, {{ minWidth: 240, closeButton: false }});
+        markers.addLayer(m);
+    }});
 }}
-syncStatus();
-setInterval(syncStatus, 10000);
-map.on('popupopen', syncStatus);
+
+// Carrega inicialmente e a cada 10 segundos
+loadDevices();
+setInterval(loadDevices, 10000);
+
+// Ajusta zoom inicial
+map.fitBounds([[{bbox[0]},{bbox[1]}],[{bbox[2]},{bbox[3]}]], {{padding:[50,50]}});
+
 </script></body></html>"""
         with open(fp, 'w', encoding='utf-8') as f: f.write(html)
 
