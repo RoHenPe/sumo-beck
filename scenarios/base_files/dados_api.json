@@ -1,0 +1,34 @@
+{
+    "simulation_name": "Simulação Alphaville",
+    "version": "3.0",
+    
+    "location_settings": {
+        "center_point_query": "Alphaville, Barueri, SP",
+        "search_radius_km": 4.0,
+        "fallback_lat": -23.4992,
+        "fallback_lon": -46.8374
+    },
+    
+    "simulation_demand": {
+        "vehicles": 1000,
+        "duration_sec": 3600,
+        "min_route_distance_m": 200
+    },
+
+    "device_settings": {
+        "camera_distance_m": 15,
+        "camera_length_m": 10,
+        "initial_state_tls": "active" 
+    },
+    
+    "visualization_style": {
+        "road_color_map": {
+            "motorway": "#B3261E",
+            "primary": "#2E7D32",
+            "secondary": "#F9A825",
+            "tertiary": "#1565C0",
+            "default": "black"
+        },
+        "default_zoom_level": 15
+    }
+}

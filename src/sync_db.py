@@ -1,0 +1,59 @@
+import json
+import os
+from pathlib import Path
+from supabase import create_client, Client
+
+SUPABASE_URL = "https://rumhqljidmwkctjojqdw.supabase.co"
+SUPABASE_KEY = "sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So"
+
+def sync_devices():
+    print(">>> 📡 Sync API -> Supabase...")
+    
+    # Sempre busca o manifesto da API
+    manifest_path = Path(__file__).resolve().parents[2] / "output" / "api_devices_manifest.json"
+    
+    if not manifest_path.exists():
+        print(f"❌ Manifesto API não encontrado: {manifest_path}")
+        return
+
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+    with open(manifest_path, 'r', encoding='utf-8') as f:
+        local_devices = json.load(f)
+
+    print(f"📂 Processando {len(local_devices)} dispositivos...")
+
+    rows = []
+    for dev in local_devices:
+        if dev.get('type') != 'traffic_control_unit': continue
+
+        rows.append({
+            "mac_address": dev['id'],
+            "tipo": "SEMAFARO",
+            "sumo_id": dev['sumo_id'],
+            "status": dev['status'],
+            "latitude": dev['geo']['lat'],
+            "longitude": dev['geo']['lon'],
+            "linked_mac": None
+        })
+
+        cam = dev.get('camera')
+        if cam:
+            rows.append({
+                "mac_address": cam['id'],
+                "tipo": "CAMERA",
+                "sumo_id": None,
+                "status": cam['status'],
+                "latitude": dev['geo']['lat'],
+                "longitude": dev['geo']['lon'],
+                "linked_mac": dev['id']
+            })
+
+    try:
+        supabase.table("dispositivos").upsert(rows, on_conflict="mac_address").execute()
+        print("✅ SUCESSO! Banco sincronizado.")
+    except Exception as e:
+        print(f"❌ ERRO: {e}")
+
+if __name__ == "__main__":
+    sync_devices()
