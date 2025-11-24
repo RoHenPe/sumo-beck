@@ -1,0 +1,1394 @@
+[
+    {
+        "source": "from_api",
+        "sumo_id": "1731305324",
+        "id": "B9:AE:26:7A:D7:2A",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "99:31:FA:5B:78:11",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5044839,
+            "lon": -46.8770922
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6335769014",
+        "id": "21:54:E4:8A:5F:64",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "2F:01:9D:41:49:3B",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4978552,
+            "lon": -46.8134878
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6335734527",
+        "id": "F0:EA:00:66:88:73",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "F1:1C:AF:9E:64:5E",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4960303,
+            "lon": -46.8118091
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1839010129",
+        "id": "F3:4C:01:0E:D6:58",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "9D:12:57:7B:07:F1",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5360513,
+            "lon": -46.8358406
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6041866031",
+        "id": "57:60:30:68:4A:82",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "9D:B6:96:DD:0A:10",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5269307,
+            "lon": -46.8352713
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_1155107457_1155107577",
+        "id": "94:9E:14:68:29:BB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "51:12:5B:F5:12:0A",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5211368,
+            "lon": -46.829708100000005
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "12291892219",
+        "id": "6D:07:62:06:38:0D",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "7F:D7:58:02:7F:29",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5154168,
+            "lon": -46.8358612
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1839066883",
+        "id": "B5:3F:41:67:93:AB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "03:5A:ED:A4:98:73",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5283939,
+            "lon": -46.8310645
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "13001716731",
+        "id": "C3:BF:69:88:BE:54",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "2D:0A:34:0A:E9:3E",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5284428,
+            "lon": -46.8310766
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5076412028",
+        "id": "1A:AF:5A:6F:F0:39",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "3D:19:BC:4D:2B:C5",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5173748,
+            "lon": -46.8465438
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1838952197",
+        "id": "03:BD:CB:34:66:76",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "FE:0B:F8:BF:3E:F8",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.517086,
+            "lon": -46.8421035
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6758072698",
+        "id": "E6:32:87:4E:36:FD",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "F8:18:43:58:F9:B6",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.517093,
+            "lon": -46.8397459
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5076412049",
+        "id": "5C:D6:8E:64:07:03",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "97:08:83:70:C9:B3",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5170378,
+            "lon": -46.8405968
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5076412048",
+        "id": "98:8F:7B:1D:96:A2",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "9F:22:96:A2:3E:31",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5169786,
+            "lon": -46.8420956
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "11000929498",
+        "id": "01:D5:FD:54:CA:86",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "3F:E4:15:3B:05:98",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5269714,
+            "lon": -46.8200444
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_1838952204_8750827855",
+        "id": "B2:B3:D6:E4:28:09",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "0F:0E:F1:87:3C:A0",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5177194,
+            "lon": -46.83829375
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5994060700",
+        "id": "B6:4F:16:DD:31:BD",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "F8:03:D0:25:1B:46",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4983489,
+            "lon": -46.876944
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "446317137",
+        "id": "69:86:23:00:42:5F",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "2A:95:BE:55:77:A0",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4929987,
+            "lon": -46.8802033
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485859",
+        "id": "3A:87:8C:AE:EB:A0",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "A8:E7:7A:83:88:22",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4929676,
+            "lon": -46.8804582
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485855",
+        "id": "97:9F:A9:2A:8A:DD",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "E6:00:A8:47:AA:35",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4921252,
+            "lon": -46.8809118
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485867",
+        "id": "5B:9D:52:2B:7F:D2",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "8F:D1:E5:C4:48:EF",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4930608,
+            "lon": -46.8806747
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485874",
+        "id": "25:C5:6E:5E:26:F7",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "F1:D6:12:13:8E:81",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4932101,
+            "lon": -46.8805477
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485835",
+        "id": "38:83:53:B1:38:BC",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "EC:E8:D5:BF:29:47",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4884401,
+            "lon": -46.8814441
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "446318641",
+        "id": "5E:CA:A4:80:DD:71",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "D5:F7:40:4F:9B:73",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4884571,
+            "lon": -46.8813443
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "959685075",
+        "id": "DE:E5:FE:F0:B2:E2",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "FB:9D:44:AB:0A:74",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5235273,
+            "lon": -46.8238423
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "959685061",
+        "id": "26:C2:7F:87:90:7E",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "2D:4F:44:6A:08:75",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5234151,
+            "lon": -46.8242204
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_959685103_959685127",
+        "id": "66:0F:5E:2B:1C:CB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "8E:3C:89:63:23:B1",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.52093365,
+            "lon": -46.83171745
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "148575328",
+        "id": "51:3C:37:36:C4:25",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "62:5D:34:D1:AE:D7",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5003617,
+            "lon": -46.8428747
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "446304418",
+        "id": "EF:5F:CA:AD:29:43",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "8D:FD:D5:3F:67:BC",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5084675,
+            "lon": -46.8509147
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5077983129",
+        "id": "54:70:A6:81:37:DF",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "04:AB:26:E6:5B:4D",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5170662,
+            "lon": -46.8676344
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1758896260",
+        "id": "57:F3:81:DE:D1:9F",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "E6:14:A1:F1:08:12",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5166931,
+            "lon": -46.8676781
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5538402200",
+        "id": "40:8D:A8:58:C8:70",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "30:7A:E3:D7:BA:9F",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5113645,
+            "lon": -46.8779846
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "184057841",
+        "id": "04:C1:06:C1:0B:7E",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "BA:F3:E2:EB:36:AB",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4953215,
+            "lon": -46.8489225
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "10894608836",
+        "id": "B5:BA:74:C9:21:B8",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "4F:42:6E:FE:5C:95",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4982696,
+            "lon": -46.8569958
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_4715802935_6338439745",
+        "id": "BA:17:96:27:2A:5F",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "B9:F2:5C:E7:4A:74",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.501386,
+            "lon": -46.83809745000001
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6042753185",
+        "id": "E6:11:95:00:0F:46",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "BB:9D:80:33:64:D3",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4999816,
+            "lon": -46.8479928
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5301028828",
+        "id": "18:9B:AB:F0:D3:89",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "47:C6:9E:F9:FD:FE",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5269319,
+            "lon": -46.8201105
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1846229831",
+        "id": "F8:E0:49:6E:59:F2",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "76:C6:4B:D1:A3:3D",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5270727,
+            "lon": -46.8202017
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1717098953",
+        "id": "D7:A4:16:D2:AC:68",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "8D:42:BB:9F:11:DD",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5241403,
+            "lon": -46.8183325
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1717098972",
+        "id": "97:FA:17:D5:D3:DF",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "EB:F0:A2:40:A6:27",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5247753,
+            "lon": -46.8176391
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "4427110525",
+        "id": "E7:DE:14:BA:6D:53",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "74:FF:44:C7:38:4C",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5214055,
+            "lon": -46.8325958
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1156818659",
+        "id": "4C:02:1F:44:DF:ED",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "81:DD:80:E8:23:A8",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5212082,
+            "lon": -46.8359352
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2626998166",
+        "id": "13:79:DE:76:64:DC",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "07:39:8A:55:41:48",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.488367,
+            "lon": -46.8324363
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_184049290_445662727",
+        "id": "73:6F:93:BF:7A:D1",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "68:47:EE:7A:B4:34",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.491497350000003,
+            "lon": -46.8426811
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "184052443",
+        "id": "C3:99:89:40:B2:62",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "40:A2:96:B1:63:AC",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5020574,
+            "lon": -46.8578653
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "8668899178",
+        "id": "CB:8A:36:81:40:7F",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "5D:EB:B0:48:F0:28",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5243835,
+            "lon": -46.8147377
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "133539380",
+        "id": "84:05:44:B0:04:E1",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "57:DB:04:6A:29:E0",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.486702,
+            "lon": -46.8561691
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2212089477",
+        "id": "B0:32:24:F9:D3:FE",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "FD:10:2A:92:4A:D1",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4871485,
+            "lon": -46.8562073
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "446308548",
+        "id": "23:F3:84:27:C0:58",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "AD:AD:23:C9:48:65",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5088204,
+            "lon": -46.8158169
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2627129339",
+        "id": "1B:26:F3:DB:C1:58",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "04:AF:22:F6:13:A5",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4648043,
+            "lon": -46.8770483
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "4425588097",
+        "id": "AE:FC:31:AC:3A:8F",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "17:DE:A3:DE:C8:7D",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5128803,
+            "lon": -46.8800036
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2367383858",
+        "id": "C5:7A:03:8A:2E:8D",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "C9:38:85:60:17:75",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5131875,
+            "lon": -46.8758035
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "148579251",
+        "id": "AE:38:E5:F0:BC:2B",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "CB:6D:A0:CA:DC:7B",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.501546,
+            "lon": -46.8370515
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5538995525",
+        "id": "8B:04:89:CD:39:D9",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "18:DF:CF:93:94:60",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5022419,
+            "lon": -46.8612251
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6817945998",
+        "id": "09:87:20:CF:2D:5D",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "27:F5:E7:E8:09:56",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4920894,
+            "lon": -46.8808441
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "8080490284",
+        "id": "DC:A5:D2:75:A3:99",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "60:E4:FC:77:09:3F",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5083594,
+            "lon": -46.8505749
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "133514243",
+        "id": "1D:B5:CC:F0:17:BB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "AE:22:E4:FA:EC:C4",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5084306,
+            "lon": -46.8507926
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_4292016976_4292016979_4427155300_765184593_#1more",
+        "id": "7F:C7:EF:A4:2A:D3",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "9F:A5:A7:A6:FA:2F",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.502097225,
+            "lon": -46.835158925
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "148578688",
+        "id": "E9:1D:CC:18:FD:22",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "6D:0B:D2:D5:90:D7",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5026574,
+            "lon": -46.8322717
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "joinedS_148575335_148577946",
+        "id": "D0:7D:2F:F0:04:D0",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "47:FC:45:24:65:6F",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.502970400000002,
+            "lon": -46.832159950000005
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "148578587",
+        "id": "56:99:14:57:DC:67",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "5F:B2:D1:EB:19:32",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5027024,
+            "lon": -46.8319298
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2332218271",
+        "id": "8B:49:0C:73:38:96",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "74:63:46:89:1C:16",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.488443,
+            "lon": -46.8324654
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "7927170334",
+        "id": "60:1B:07:1E:61:82",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "F3:A8:E5:EB:91:1D",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5085437,
+            "lon": -46.8509153
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6929701996",
+        "id": "30:1D:73:BE:55:56",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "86:16:27:D3:7C:8D",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5085081,
+            "lon": -46.8507973
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "11215456434",
+        "id": "76:6B:8D:9F:C2:18",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "D8:24:70:6B:DB:1B",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5084362,
+            "lon": -46.8505807
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5076412050",
+        "id": "1F:0E:FA:F8:64:09",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "7E:58:00:6B:53:A9",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5171463,
+            "lon": -46.8406004
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "959685054",
+        "id": "B9:E9:75:3D:CD:68",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "57:BE:94:54:F4:F5",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5172018,
+            "lon": -46.8397419
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1838952201",
+        "id": "9B:19:BD:37:45:B5",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "6A:DA:26:46:35:E1",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5174515,
+            "lon": -46.8389234
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1946803442",
+        "id": "7C:71:30:28:41:BC",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "0D:10:C9:53:81:24",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5187914,
+            "lon": -46.8373483
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5076412027",
+        "id": "DD:15:D6:AA:09:EB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "8B:34:70:33:D0:31",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.517275,
+            "lon": -46.8465681
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "959685044",
+        "id": "17:55:54:21:B4:81",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "3E:95:CE:50:08:D8",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5235222,
+            "lon": -46.8242477
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "9703810031",
+        "id": "85:CA:D1:F2:B8:A4",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "92:FB:20:C7:30:7C",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5236276,
+            "lon": -46.8238736
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "184049229",
+        "id": "4B:54:A0:67:83:6D",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "6D:F5:34:31:7C:4F",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5001739,
+            "lon": -46.8428343
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1732485896",
+        "id": "09:BD:10:13:F0:AE",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "04:59:7F:83:80:DD",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4982853,
+            "lon": -46.8770464
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "4710980189",
+        "id": "59:EB:FD:42:EF:D8",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "74:26:B6:59:82:A6",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5034309,
+            "lon": -46.8791104
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "8099563457",
+        "id": "3F:57:7A:52:C8:AB",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "CF:ED:02:91:C8:67",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5127496,
+            "lon": -46.8799566
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2367380291",
+        "id": "92:84:80:5C:F2:56",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "49:FB:05:2E:00:22",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5130047,
+            "lon": -46.8758211
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "651116440",
+        "id": "73:1E:A8:D8:AE:1C",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "90:C9:36:FB:5B:2B",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5111205,
+            "lon": -46.8779838
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2628338479",
+        "id": "8F:C1:C0:50:DF:86",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "3C:44:9B:60:71:71",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4645679,
+            "lon": -46.870818
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6133119257",
+        "id": "B5:5D:32:4F:78:D2",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "2B:D2:3E:BC:E1:C4",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.4885843,
+            "lon": -46.8814733
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "2367358495",
+        "id": "13:7F:97:A6:E9:E3",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "BC:B3:10:A0:3F:6B",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5245399,
+            "lon": -46.8147933
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "1717098915",
+        "id": "EC:DD:31:B5:85:F0",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "9B:D6:C4:F9:C0:A7",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5235722,
+            "lon": -46.8179315
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "5883183452",
+        "id": "E9:63:04:D3:E4:8D",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "FD:2F:AB:4D:6A:78",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5000565,
+            "lon": -46.8638247
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "4717230594",
+        "id": "C2:72:67:A6:84:3E",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "53:11:97:4E:57:AA",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5021726,
+            "lon": -46.8611695
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "446308547",
+        "id": "29:7B:D2:12:3E:93",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "A8:4B:35:5A:60:A4",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5087617,
+            "lon": -46.8153497
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6042752981",
+        "id": "77:56:07:31:D2:33",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "E8:50:71:1F:0C:68",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5001126,
+            "lon": -46.8482736
+        },
+        "status": "active"
+    },
+    {
+        "source": "from_api",
+        "sumo_id": "6060994012",
+        "id": "62:75:D8:D4:D4:09",
+        "type": "traffic_control_unit",
+        "camera": {
+            "id": "B8:52:24:FE:72:BF",
+            "status": "active",
+            "source": "from_api"
+        },
+        "geo": {
+            "lat": -23.5002421,
+            "lon": -46.848253
+        },
+        "status": "active"
+    }
+]
