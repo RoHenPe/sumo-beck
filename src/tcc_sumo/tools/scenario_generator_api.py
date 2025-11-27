@@ -4,21 +4,23 @@ import json
 import subprocess
 import shutil
 import yaml
-import math
-import argparse
+import random
 import urllib.request
 import urllib.parse
 import ssl
 import re
-import random
-import time
+import argparse
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
-# Tenta carregar .env padrão e .env.local (para pegar chaves NEXT_PUBLIC)
 load_dotenv()
-load_dotenv(Path(__file__).parents[4] / "site-web" / ".env.local")
+site_env = Path(__file__).parents[4] / "site-web" / ".env.local"
+if site_env.exists():
+    load_dotenv(site_env)
+
+SB_URL = os.getenv("SUPABASE_URL") or os.getenv("NEXT_PUBLIC_SUPABASE_URL") or "https://rumhqljidmwkctjojqdw.supabase.co"
+SB_KEY = os.getenv("SUPABASE_KEY") or os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY") or "sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So"
 
 if 'SUMO_HOME' in os.environ:
     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
@@ -44,13 +46,8 @@ from tcc_sumo.utils.helpers import get_logger, setup_logging, ensure_sumo_home, 
 setup_logging()
 logger = get_logger("ScenarioGeneratorAPI")
 
-# Tenta pegar variáveis padrão ou as do Next.js
-SB_URL = os.getenv("SUPABASE_URL") or os.getenv("NEXT_PUBLIC_SUPABASE_URL")
-SB_KEY = os.getenv("SUPABASE_KEY") or os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
-
 REPO_NAME = "RoHenPe/plataforma-trafego-web"
 REPO_MAP_PATH = "public/maps/api_mapa_validacao.html"
-# Ajuste este caminho se necessário para apontar para a pasta 'public/maps' do seu site
 WEB_PLATFORM_PATH = PROJECT_ROOT.parent / "site-web/public/maps" 
 
 class ScenarioGeneratorAPI:
@@ -76,11 +73,8 @@ class ScenarioGeneratorAPI:
                 return mac
 
     def generate(self, input_file_name, num_vehicles, duration):
-        logger.info("=== GERAÇÃO API (DYNAMIC MAP) ===")
+        logger.info("=== GERAÇÃO API (COLORED PINS) ===")
         
-        if not SB_URL or not SB_KEY:
-            logger.warning("Supabase credentials not found. Map sync will fail.")
-
         self._clear_database()
         
         base_file = PROJECT_ROOT / "scenarios" / "base_files" / input_file_name
@@ -124,22 +118,18 @@ class ScenarioGeneratorAPI:
         logger.info("=== SUCESSO ===")
 
     def _clear_database(self):
-        if not HAS_SUPABASE or not SB_URL or not SB_KEY: return
+        if not HAS_SUPABASE: return
         try:
             client = create_client(SB_URL, SB_KEY)
             client.table("dispositivos").delete().neq("mac_address", "0").execute()
+            logger.info("Banco limpo.")
         except: pass
 
     def _deploy_local(self, source):
-        # Garante que o diretório de destino existe
         if WEB_PLATFORM_PATH.parent.exists():
-            if not WEB_PLATFORM_PATH.exists():
-                WEB_PLATFORM_PATH.mkdir(parents=True)
-            try: 
-                shutil.copy2(source, WEB_PLATFORM_PATH / "api_mapa_validacao.html")
-                logger.info(f"Mapa copiado para: {WEB_PLATFORM_PATH}")
-            except Exception as e:
-                logger.warning(f"Falha ao copiar mapa local: {e}")
+            if not WEB_PLATFORM_PATH.exists(): WEB_PLATFORM_PATH.mkdir(parents=True)
+            try: shutil.copy2(source, WEB_PLATFORM_PATH / "api_mapa_validacao.html")
+            except: pass
 
     def _upload_to_github(self, local_path):
         if not HAS_GITHUB: return
@@ -151,17 +141,21 @@ class ScenarioGeneratorAPI:
             with open(local_path, 'r', encoding='utf-8') as f: content = f.read()
             try:
                 c = repo.get_contents(REPO_MAP_PATH)
-                repo.update_file(c.path, "Update Map via API", content, c.sha)
+                repo.update_file(c.path, "Update Map", content, c.sha)
             except:
-                repo.create_file(REPO_MAP_PATH, "Create Map via API", content)
-        except Exception as e:
-            logger.error(f"GitHub Upload Error: {e}")
+                repo.create_file(REPO_MAP_PATH, "Create Map", content)
+        except: pass
 
     def _run_db_sync(self):
         sync = PROJECT_ROOT / "src" / "sync_db.py"
         if sync.exists():
-            try: subprocess.run([sys.executable, str(sync)], check=True)
-            except: pass
+            env_vars = os.environ.copy()
+            env_vars["SUPABASE_URL"] = SB_URL
+            env_vars["SUPABASE_KEY"] = SB_KEY
+            try: 
+                subprocess.run([sys.executable, str(sync)], check=True, env=env_vars)
+                logger.info("Sync DB OK")
+            except: logger.error("Sync DB Failed")
 
     def _load_config(self, fpath, vehs, dur):
         with open(fpath, encoding='utf-8') as f: data = json.load(f)
@@ -269,7 +263,6 @@ class ScenarioGeneratorAPI:
             
             incoming_lanes = set()
             for c in conns: incoming_lanes.add(c[0].getID())
-            
             for lane_id in incoming_lanes:
                 l_len = net.getLane(lane_id).getLength()
                 pos = max(0, l_len - self.settings['DEV']['offset'])
@@ -283,6 +276,7 @@ class ScenarioGeneratorAPI:
                 "sumo_id": tid, "id": tls_mac, "type": "SEMAFARO",
                 "geo": {"lat": lat, "lon": lon}, "status": "active"
             })
+            
             self.device_manifest.append({
                 "source": "from_api",
                 "sumo_id": None, "id": cam_mac, "type": "CAMERA",
@@ -322,8 +316,6 @@ class ScenarioGeneratorAPI:
             f.write("</additional>")
 
     def _gen_web_map_dynamic(self, lat, lon, bbox, roads, fp):
-        """Gera HTML com Leaflet + Supabase para leitura em tempo real."""
-        
         lines = []
         for r in roads:
             pts = ",".join([f"[{p[0]},{p[1]}]" for p in r['p']])
@@ -341,130 +333,80 @@ class ScenarioGeneratorAPI:
 <style>
   body {{ margin:0; font-family:'Inter', sans-serif; background:#f8fafc; overflow:hidden; }} 
   #map {{ width:100vw; height:100vh; }}
-  
-  /* Cards Estilizados */
   .elegant-card {{ width: 240px; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }}
   .card-header {{ padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }}
   .card-type {{ font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; }}
   .card-status {{ width: 10px; height: 10px; border-radius: 50%; }}
-  
   .card-body {{ padding: 16px; }}
   .card-mac {{ font-family: monospace; font-size: 14px; font-weight: 600; color: #334155; margin-bottom: 8px; display: block; }}
   .card-coords {{ font-size: 11px; color: #94a3b8; display: flex; gap: 8px; }}
-  
-  /* Legenda */
   .legend {{ position: absolute; bottom: 24px; right: 24px; z-index: 1000; background: rgba(255,255,255,0.95); padding: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 140px; }}
   .l-item {{ display: flex; align-items: center; margin-bottom: 8px; font-size: 12px; color: #475569; font-weight: 500; }}
   .dot {{ width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; }}
-  
-  /* Ícones no Mapa */
   .marker-pin {{ width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: 2px solid white; }}
   .marker-pin span {{ font-size: 18px; }}
-  
-  /* Cores de Status */
-  .bg-active {{ background-color: #10b981; }}
-  .bg-inactive {{ background-color: #ef4444; }}
+  .bg-active {{ background-color: #10b981; }} 
+  .bg-inactive {{ background-color: #ef4444; }} 
   .bg-maintenance {{ background-color: #f59e0b; }}
-  .text-active {{ color: #10b981; }}
-  
 </style></head><body><div id="map"></div>
-
 <div class="legend">
   <div style="margin-bottom:10px;font-weight:700;color:#1e293b">Legenda</div>
   <div class="l-item"><div class="dot" style="background:#10b981"></div>Ativo</div>
   <div class="l-item"><div class="dot" style="background:#ef4444"></div>Inativo</div>
   <div class="l-item"><div class="dot" style="background:#f59e0b"></div>Manutenção</div>
   <div style="margin: 8px 0; height:1px; background:#e2e8f0"></div>
-  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#3b82f6">videocam</span>Câmera</div>
-  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#8b5cf6">traffic</span>Semáforo</div>
+  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#333">videocam</span>Câmera</div>
+  <div class="l-item"><span class="material-icons" style="font-size:14px; margin-right:6px; color:#333">traffic</span>Semáforo</div>
 </div>
-
 <script>
-const supabaseUrl = '{SB_URL}'; const supabaseKey = '{SB_KEY}';
-if (!supabaseUrl || !supabaseKey || supabaseUrl === 'None' || supabaseKey === 'None') {{
-    alert('Erro: Chaves do Supabase não configuradas no servidor Python. O mapa não sincronizará.');
-}}
-const client = supabase.createClient(supabaseUrl, supabaseKey);
+function getQueryParam(name) {{ const urlParams = new URLSearchParams(window.location.search); return urlParams.get(name); }}
+const sbUrl = getQueryParam('sbUrl') || '{SB_URL}';
+const sbKey = getQueryParam('sbKey') || '{SB_KEY}';
+if (!sbUrl || !sbKey || sbUrl === 'None') alert('Erro: Chaves Supabase não configuradas.');
+const client = supabase.createClient(sbUrl, sbKey);
 
-// Inicializa o mapa
 var map = L.map('map', {{ zoomControl: false }}).setView([{lat}, {lon}], 14);
-L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
-    subdomains: 'abcd', maxZoom: 20
-}}).addTo(map);
+L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{subdomains:'abcd',maxZoom:20}}).addTo(map);
 L.control.zoom({{ position: 'topright' }}).addTo(map);
-
-// Desenha as ruas (fixas do cenário)
 {chr(10).join(lines)}
 
-// Cluster de marcadores
 var markers = L.markerClusterGroup({{
-    showCoverageOnHover: false,
-    zoomToBoundsOnClick: true,
-    spiderfyOnMaxZoom: true,
-    maxClusterRadius: 40
+    showCoverageOnHover: false, zoomToBoundsOnClick: true, spiderfyOnMaxZoom: true, maxClusterRadius: 40
 }});
 map.addLayer(markers);
 
-// Função principal: Busca dispositivos do Banco e desenha no mapa
 async function loadDevices() {{
-    const {{ data, error }} = await client
-        .from('dispositivos')
-        .select('id, mac_address, tipo, status, latitude, longitude');
-
-    if (error) {{ console.error('Erro ao buscar dispositivos:', error); return; }}
-    if (!data) return;
-
-    // Limpa marcadores antigos para redesenhar
+    const {{ data, error }} = await client.from('dispositivos').select('id, mac_address, tipo, status, latitude, longitude');
+    if (error || !data) return;
     markers.clearLayers();
-
+    
     data.forEach(dev => {{
         if (!dev.latitude || !dev.longitude) return;
-
-        // Define ícone e cor baseada no tipo e status
-        let iconName = (dev.tipo === 'CAMERA') ? 'videocam' : 'traffic';
-        let bgColor = (dev.tipo === 'CAMERA') ? '#3b82f6' : '#8b5cf6'; // Azul ou Roxo
         
-        // Status altera a borda ou indicador? Vamos usar status para cor do 'dot' no popup
-        let statusColorClass = 'bg-active';
-        if (dev.status === 'inactive') statusColorClass = 'bg-inactive';
-        if (dev.status === 'maintenance') statusColorClass = 'bg-maintenance';
-
+        let status = dev.status || 'active';
+        let bgColor = '#10b981';
+        if (status === 'inactive') bgColor = '#ef4444';
+        if (status === 'maintenance') bgColor = '#f59e0b';
+        
+        let iconName = (dev.tipo === 'CAMERA') ? 'videocam' : 'traffic';
+        
         const customIcon = L.divIcon({{
             className: 'custom-pin',
             html: `<div class="marker-pin" style="background-color: ${{bgColor}}"><span class="material-icons">${{iconName}}</span></div>`,
-            iconSize: [30, 30],
-            iconAnchor: [15, 15]
+            iconSize: [30, 30], iconAnchor: [15, 15]
         }});
-
-        const popupContent = `
-            <div class="elegant-card">
-                <div class="card-header">
-                    <span class="card-type">${{dev.tipo}}</span>
-                    <div class="card-status ${{statusColorClass}}"></div>
-                </div>
-                <div class="card-body">
-                    <span class="card-mac">${{dev.mac_address}}</span>
-                    <div class="card-coords">
-                        <span>Lat: ${{dev.latitude.toFixed(4)}}</span>
-                        <span>Lon: ${{dev.longitude.toFixed(4)}}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-
+        
+        let statusClass = (status === 'inactive') ? 'bg-inactive' : (status === 'maintenance' ? 'bg-maintenance' : 'bg-active');
+        const popupContent = `<div class="elegant-card"><div class="card-header"><span class="card-type">${{dev.tipo}}</span><div class="card-status ${{statusClass}}"></div></div><div class="card-body"><span class="card-mac">${{dev.mac_address}}</span><div class="card-coords"><span>Lat: ${{dev.latitude.toFixed(4)}}</span><span>Lon: ${{dev.longitude.toFixed(4)}}</span></div></div></div>`;
+        
         const m = L.marker([dev.latitude, dev.longitude], {{ icon: customIcon }});
         m.bindPopup(popupContent, {{ minWidth: 240, closeButton: false }});
         markers.addLayer(m);
     }});
 }}
-
-// Carrega inicialmente e a cada 10 segundos
 loadDevices();
 setInterval(loadDevices, 10000);
-
-// Ajusta zoom inicial
 map.fitBounds([[{bbox[0]},{bbox[1]}],[{bbox[2]},{bbox[3]}]], {{padding:[50,50]}});
-
 </script></body></html>"""
         with open(fp, 'w', encoding='utf-8') as f: f.write(html)
 
@@ -480,15 +422,7 @@ map.fitBounds([[{bbox[0]},{bbox[1]}],[{bbox[2]},{bbox[3]}]], {{padding:[50,50]}}
             "-e", str(self.settings['SIM']['dur']), "-p", "2.5", "--validate"
         ], check=True)
         with open(out / "api.sumocfg", 'w') as f:
-            f.write(f"""<configuration>
-            <input>
-                <net-file value="{net.name}"/>
-                <route-files value="{rou.name}"/>
-                <additional-files value="detectors.add.xml"/>
-                <gui-settings-file value="gui-settings.xml"/>
-            </input>
-            <time><begin value="0"/><end value="{int(self.settings['SIM']['dur'])}"/></time>
-            </configuration>""")
+            f.write(f"""<configuration><input><net-file value="{net.name}"/><route-files value="{rou.name}"/><additional-files value="detectors.add.xml"/><gui-settings-file value="gui-settings.xml"/></input><time><begin value="0"/><end value="{int(self.settings['SIM']['dur'])}"/></time></configuration>""")
 
     def _update_cfg(self):
         with open(PROJECT_ROOT / 'config' / 'config.yaml', 'w') as f:

@@ -2,7 +2,7 @@
     {
         "source": "from_api",
         "sumo_id": "1731305324",
-        "id": "62:A5:05:36:7E:6B",
+        "id": "4B:B7:6B:D4:CB:F4",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5044839,
@@ -13,19 +13,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "C6:B6:B0:FE:E7:AE",
+        "id": "12:02:AE:9A:84:21",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5043839,
             "lon": -46.8769922
         },
         "status": "active",
-        "linked_to": "62:A5:05:36:7E:6B"
+        "linked_to": "4B:B7:6B:D4:CB:F4"
     },
     {
         "source": "from_api",
         "sumo_id": "6335769014",
-        "id": "96:B7:93:BA:6B:AC",
+        "id": "8A:E9:39:75:30:57",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4978552,
@@ -36,19 +36,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "F1:C4:6E:09:5B:21",
+        "id": "88:37:5A:05:62:94",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4977552,
             "lon": -46.813387799999994
         },
         "status": "active",
-        "linked_to": "96:B7:93:BA:6B:AC"
+        "linked_to": "8A:E9:39:75:30:57"
     },
     {
         "source": "from_api",
         "sumo_id": "6335734527",
-        "id": "C0:0F:56:E5:54:9D",
+        "id": "90:95:36:CE:ED:EA",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4960303,
@@ -59,19 +59,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "3A:B9:9A:DA:CD:8B",
+        "id": "1A:B5:88:67:D6:20",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4959303,
             "lon": -46.811709099999995
         },
         "status": "active",
-        "linked_to": "C0:0F:56:E5:54:9D"
+        "linked_to": "90:95:36:CE:ED:EA"
     },
     {
         "source": "from_api",
         "sumo_id": "1839010129",
-        "id": "1C:9E:15:62:D7:8A",
+        "id": "63:DD:36:F7:20:20",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5360513,
@@ -82,19 +82,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "87:13:5D:17:B9:38",
+        "id": "AB:8C:94:A0:A6:BD",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5359513,
             "lon": -46.835740599999994
         },
         "status": "active",
-        "linked_to": "1C:9E:15:62:D7:8A"
+        "linked_to": "63:DD:36:F7:20:20"
     },
     {
         "source": "from_api",
         "sumo_id": "6041866031",
-        "id": "EB:7C:0F:03:35:81",
+        "id": "55:62:EF:71:17:33",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5269307,
@@ -105,19 +105,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "9E:55:03:9B:B0:4B",
+        "id": "6A:2C:58:A7:00:AF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5268307,
             "lon": -46.8351713
         },
         "status": "active",
-        "linked_to": "EB:7C:0F:03:35:81"
+        "linked_to": "55:62:EF:71:17:33"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_1155107457_1155107577",
-        "id": "99:44:49:E1:0E:7B",
+        "id": "58:65:22:E9:68:AE",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5211368,
@@ -128,19 +128,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "90:CF:67:A4:20:9C",
+        "id": "E7:46:4C:61:DE:2A",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5210368,
             "lon": -46.8296081
         },
         "status": "active",
-        "linked_to": "99:44:49:E1:0E:7B"
+        "linked_to": "58:65:22:E9:68:AE"
     },
     {
         "source": "from_api",
         "sumo_id": "12291892219",
-        "id": "19:8C:1D:73:12:1F",
+        "id": "A4:5B:CE:9D:39:95",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5154168,
@@ -151,19 +151,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "83:B0:AE:42:3F:F4",
+        "id": "86:4D:FA:B0:83:AD",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5153168,
             "lon": -46.83576119999999
         },
         "status": "active",
-        "linked_to": "19:8C:1D:73:12:1F"
+        "linked_to": "A4:5B:CE:9D:39:95"
     },
     {
         "source": "from_api",
         "sumo_id": "1839066883",
-        "id": "E8:64:54:6F:D7:8B",
+        "id": "0E:04:6A:29:29:9B",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5283939,
@@ -174,19 +174,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "9B:B3:7D:E4:CC:A9",
+        "id": "99:BA:99:58:46:22",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5282939,
             "lon": -46.83096449999999
         },
         "status": "active",
-        "linked_to": "E8:64:54:6F:D7:8B"
+        "linked_to": "0E:04:6A:29:29:9B"
     },
     {
         "source": "from_api",
         "sumo_id": "13001716731",
-        "id": "8F:39:D4:5A:A1:52",
+        "id": "44:CC:AE:CF:FE:14",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5284428,
@@ -197,19 +197,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "92:23:CF:9C:92:5F",
+        "id": "11:98:40:71:C5:AF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5283428,
             "lon": -46.8309766
         },
         "status": "active",
-        "linked_to": "8F:39:D4:5A:A1:52"
+        "linked_to": "44:CC:AE:CF:FE:14"
     },
     {
         "source": "from_api",
         "sumo_id": "5076412028",
-        "id": "F2:18:F6:E7:EF:13",
+        "id": "0D:E6:87:56:84:F4",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5173748,
@@ -220,19 +220,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "46:45:EC:19:F0:1B",
+        "id": "89:DF:14:1A:78:50",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5172748,
             "lon": -46.846443799999996
         },
         "status": "active",
-        "linked_to": "F2:18:F6:E7:EF:13"
+        "linked_to": "0D:E6:87:56:84:F4"
     },
     {
         "source": "from_api",
         "sumo_id": "1838952197",
-        "id": "73:5D:F3:1C:AF:CF",
+        "id": "2D:C4:41:C0:08:40",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.517086,
@@ -243,19 +243,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "FE:D7:5E:83:FE:93",
+        "id": "03:6C:D4:5E:DC:A8",
         "type": "CAMERA",
         "geo": {
             "lat": -23.516986,
             "lon": -46.8420035
         },
         "status": "active",
-        "linked_to": "73:5D:F3:1C:AF:CF"
+        "linked_to": "2D:C4:41:C0:08:40"
     },
     {
         "source": "from_api",
         "sumo_id": "6758072698",
-        "id": "EB:AC:8C:80:29:41",
+        "id": "95:4C:12:59:3C:4F",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.517093,
@@ -266,19 +266,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "06:2A:FC:49:68:95",
+        "id": "46:F8:EC:25:5C:19",
         "type": "CAMERA",
         "geo": {
             "lat": -23.516993,
             "lon": -46.839645899999994
         },
         "status": "active",
-        "linked_to": "EB:AC:8C:80:29:41"
+        "linked_to": "95:4C:12:59:3C:4F"
     },
     {
         "source": "from_api",
         "sumo_id": "5076412049",
-        "id": "29:15:8C:BD:59:9E",
+        "id": "2D:B7:AE:BB:8F:2B",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5170378,
@@ -289,19 +289,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "8C:00:30:52:7F:26",
+        "id": "0C:7A:90:CF:36:A3",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5169378,
             "lon": -46.8404968
         },
         "status": "active",
-        "linked_to": "29:15:8C:BD:59:9E"
+        "linked_to": "2D:B7:AE:BB:8F:2B"
     },
     {
         "source": "from_api",
         "sumo_id": "5076412048",
-        "id": "25:40:48:49:C3:0C",
+        "id": "02:BA:56:D7:8C:AD",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5169786,
@@ -312,19 +312,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "35:32:5C:4F:BC:58",
+        "id": "59:5B:E1:7A:79:B9",
         "type": "CAMERA",
         "geo": {
             "lat": -23.516878600000002,
             "lon": -46.8419956
         },
         "status": "active",
-        "linked_to": "25:40:48:49:C3:0C"
+        "linked_to": "02:BA:56:D7:8C:AD"
     },
     {
         "source": "from_api",
         "sumo_id": "11000929498",
-        "id": "91:F9:7C:84:17:9A",
+        "id": "F8:40:3C:55:CE:CB",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5269714,
@@ -335,19 +335,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "16:15:80:00:B6:3F",
+        "id": "85:EB:7A:16:EE:71",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5268714,
             "lon": -46.8199444
         },
         "status": "active",
-        "linked_to": "91:F9:7C:84:17:9A"
+        "linked_to": "F8:40:3C:55:CE:CB"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_1838952204_8750827855",
-        "id": "17:C3:89:71:B8:A4",
+        "id": "64:14:D2:D6:74:49",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5177194,
@@ -358,19 +358,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "F6:07:C7:F0:7C:EF",
+        "id": "CE:F1:03:B1:E9:31",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5176194,
             "lon": -46.838193749999995
         },
         "status": "active",
-        "linked_to": "17:C3:89:71:B8:A4"
+        "linked_to": "64:14:D2:D6:74:49"
     },
     {
         "source": "from_api",
         "sumo_id": "5994060700",
-        "id": "7E:9A:7A:3A:F7:AB",
+        "id": "04:DA:D4:BD:19:C9",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4983489,
@@ -381,19 +381,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "D0:FA:9B:4C:F3:3F",
+        "id": "DB:CB:05:71:40:4D",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4982489,
             "lon": -46.876844
         },
         "status": "active",
-        "linked_to": "7E:9A:7A:3A:F7:AB"
+        "linked_to": "04:DA:D4:BD:19:C9"
     },
     {
         "source": "from_api",
         "sumo_id": "446317137",
-        "id": "1D:04:B5:B5:51:E3",
+        "id": "6F:5B:C0:29:E0:9A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4929987,
@@ -404,19 +404,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "D4:87:CA:C5:C7:D4",
+        "id": "33:B1:F0:38:37:EF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4928987,
             "lon": -46.880103299999995
         },
         "status": "active",
-        "linked_to": "1D:04:B5:B5:51:E3"
+        "linked_to": "6F:5B:C0:29:E0:9A"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485859",
-        "id": "0C:78:19:01:D5:E1",
+        "id": "E7:F4:86:9C:E2:87",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4929676,
@@ -427,19 +427,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "21:2F:AC:02:29:68",
+        "id": "3F:FB:FA:B1:06:C8",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4928676,
             "lon": -46.880358199999996
         },
         "status": "active",
-        "linked_to": "0C:78:19:01:D5:E1"
+        "linked_to": "E7:F4:86:9C:E2:87"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485855",
-        "id": "8C:79:54:41:23:B6",
+        "id": "07:66:38:D1:6D:BF",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4921252,
@@ -450,19 +450,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "B4:4E:FB:54:14:2E",
+        "id": "D5:77:37:1D:D8:BB",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4920252,
             "lon": -46.8808118
         },
         "status": "active",
-        "linked_to": "8C:79:54:41:23:B6"
+        "linked_to": "07:66:38:D1:6D:BF"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485867",
-        "id": "DC:D9:D3:B8:1A:C5",
+        "id": "09:D3:EA:3E:FB:B1",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4930608,
@@ -473,19 +473,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "0F:A1:84:0E:69:A9",
+        "id": "AC:CA:AB:65:5D:EA",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4929608,
             "lon": -46.8805747
         },
         "status": "active",
-        "linked_to": "DC:D9:D3:B8:1A:C5"
+        "linked_to": "09:D3:EA:3E:FB:B1"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485874",
-        "id": "48:76:74:A4:AF:07",
+        "id": "9A:55:C0:48:96:E5",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4932101,
@@ -496,19 +496,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "4E:04:DA:39:41:27",
+        "id": "4A:2B:15:CF:9B:A3",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4931101,
             "lon": -46.8804477
         },
         "status": "active",
-        "linked_to": "48:76:74:A4:AF:07"
+        "linked_to": "9A:55:C0:48:96:E5"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485835",
-        "id": "74:7F:47:36:CB:93",
+        "id": "BC:CF:03:E6:4F:CE",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4884401,
@@ -519,19 +519,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "50:FE:42:3B:22:F9",
+        "id": "DF:0A:79:DA:C0:04",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4883401,
             "lon": -46.8813441
         },
         "status": "active",
-        "linked_to": "74:7F:47:36:CB:93"
+        "linked_to": "BC:CF:03:E6:4F:CE"
     },
     {
         "source": "from_api",
         "sumo_id": "446318641",
-        "id": "DC:91:EE:99:46:A9",
+        "id": "C5:7A:91:E4:9D:4F",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4884571,
@@ -542,19 +542,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "10:CB:6C:F2:63:C9",
+        "id": "FB:96:34:FB:AA:78",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4883571,
             "lon": -46.8812443
         },
         "status": "active",
-        "linked_to": "DC:91:EE:99:46:A9"
+        "linked_to": "C5:7A:91:E4:9D:4F"
     },
     {
         "source": "from_api",
         "sumo_id": "959685075",
-        "id": "FF:20:9F:75:99:BD",
+        "id": "58:47:61:DE:C5:92",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5235273,
@@ -565,19 +565,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "4A:23:0A:BB:EE:50",
+        "id": "80:3B:D4:F0:0F:1E",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5234273,
             "lon": -46.8237423
         },
         "status": "active",
-        "linked_to": "FF:20:9F:75:99:BD"
+        "linked_to": "58:47:61:DE:C5:92"
     },
     {
         "source": "from_api",
         "sumo_id": "959685061",
-        "id": "8D:C6:A5:9E:C6:56",
+        "id": "75:29:5B:85:84:17",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5234151,
@@ -588,19 +588,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "3C:DB:0A:DE:0A:E2",
+        "id": "7E:05:2B:79:6C:E9",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5233151,
             "lon": -46.8241204
         },
         "status": "active",
-        "linked_to": "8D:C6:A5:9E:C6:56"
+        "linked_to": "75:29:5B:85:84:17"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_959685103_959685127",
-        "id": "64:28:B6:E6:12:10",
+        "id": "21:ED:B6:EE:FB:4A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.52093365,
@@ -611,19 +611,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "8C:1E:91:81:AC:DE",
+        "id": "AA:CF:DD:4E:1E:C9",
         "type": "CAMERA",
         "geo": {
             "lat": -23.52083365,
             "lon": -46.831617449999996
         },
         "status": "active",
-        "linked_to": "64:28:B6:E6:12:10"
+        "linked_to": "21:ED:B6:EE:FB:4A"
     },
     {
         "source": "from_api",
         "sumo_id": "148575328",
-        "id": "DD:17:BA:66:16:5F",
+        "id": "D1:83:91:C2:3B:9D",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5003617,
@@ -634,19 +634,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "F3:AA:D3:96:C3:C2",
+        "id": "F7:9E:0B:27:AF:16",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5002617,
             "lon": -46.8427747
         },
         "status": "active",
-        "linked_to": "DD:17:BA:66:16:5F"
+        "linked_to": "D1:83:91:C2:3B:9D"
     },
     {
         "source": "from_api",
         "sumo_id": "446304418",
-        "id": "1F:EC:B0:FD:EE:A4",
+        "id": "9E:79:F2:3D:FD:6C",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5084675,
@@ -657,19 +657,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "E0:EC:92:DE:C9:5D",
+        "id": "05:AC:8A:7D:55:70",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5083675,
             "lon": -46.850814699999994
         },
         "status": "active",
-        "linked_to": "1F:EC:B0:FD:EE:A4"
+        "linked_to": "9E:79:F2:3D:FD:6C"
     },
     {
         "source": "from_api",
         "sumo_id": "5077983129",
-        "id": "AD:70:90:F8:51:55",
+        "id": "78:D2:7B:D2:A6:86",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5170662,
@@ -680,19 +680,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "C1:DD:1B:BA:B1:4D",
+        "id": "22:60:62:AF:62:15",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5169662,
             "lon": -46.8675344
         },
         "status": "active",
-        "linked_to": "AD:70:90:F8:51:55"
+        "linked_to": "78:D2:7B:D2:A6:86"
     },
     {
         "source": "from_api",
         "sumo_id": "1758896260",
-        "id": "DE:BB:96:09:49:2C",
+        "id": "C4:72:80:94:82:F2",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5166931,
@@ -703,19 +703,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "8D:A8:8F:0D:2A:D2",
+        "id": "BC:11:2D:43:51:C0",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5165931,
             "lon": -46.867578099999996
         },
         "status": "active",
-        "linked_to": "DE:BB:96:09:49:2C"
+        "linked_to": "C4:72:80:94:82:F2"
     },
     {
         "source": "from_api",
         "sumo_id": "5538402200",
-        "id": "D0:8E:E3:AE:A1:2B",
+        "id": "7C:8C:2F:51:E6:FF",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5113645,
@@ -726,19 +726,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "F7:DF:5A:3B:FA:7B",
+        "id": "80:6C:7C:CB:A9:DC",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5112645,
             "lon": -46.877884599999994
         },
         "status": "active",
-        "linked_to": "D0:8E:E3:AE:A1:2B"
+        "linked_to": "7C:8C:2F:51:E6:FF"
     },
     {
         "source": "from_api",
         "sumo_id": "184057841",
-        "id": "C5:17:C4:07:C9:AA",
+        "id": "2A:09:7E:D5:98:13",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4953215,
@@ -749,19 +749,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "D4:55:F7:69:02:B6",
+        "id": "9C:2B:3B:BB:F0:26",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4952215,
             "lon": -46.8488225
         },
         "status": "active",
-        "linked_to": "C5:17:C4:07:C9:AA"
+        "linked_to": "2A:09:7E:D5:98:13"
     },
     {
         "source": "from_api",
         "sumo_id": "10894608836",
-        "id": "CE:08:A6:AE:B5:02",
+        "id": "81:E9:0E:4B:57:1E",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4982696,
@@ -772,19 +772,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "B6:D1:D0:6E:73:31",
+        "id": "00:91:66:C8:89:AF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4981696,
             "lon": -46.8568958
         },
         "status": "active",
-        "linked_to": "CE:08:A6:AE:B5:02"
+        "linked_to": "81:E9:0E:4B:57:1E"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_4715802935_6338439745",
-        "id": "AA:92:5E:69:48:32",
+        "id": "ED:5F:69:1C:43:E7",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.501386,
@@ -795,19 +795,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "26:E0:5A:E7:70:F0",
+        "id": "FD:04:B3:FA:66:AB",
         "type": "CAMERA",
         "geo": {
             "lat": -23.501286,
             "lon": -46.83799745
         },
         "status": "active",
-        "linked_to": "AA:92:5E:69:48:32"
+        "linked_to": "ED:5F:69:1C:43:E7"
     },
     {
         "source": "from_api",
         "sumo_id": "6042753185",
-        "id": "4E:62:B7:82:4D:24",
+        "id": "C2:D6:A2:BC:38:CE",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4999816,
@@ -818,19 +818,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "52:13:C7:DD:D1:68",
+        "id": "EE:3F:49:11:21:FA",
         "type": "CAMERA",
         "geo": {
             "lat": -23.499881600000002,
             "lon": -46.8478928
         },
         "status": "active",
-        "linked_to": "4E:62:B7:82:4D:24"
+        "linked_to": "C2:D6:A2:BC:38:CE"
     },
     {
         "source": "from_api",
         "sumo_id": "5301028828",
-        "id": "40:62:83:CB:19:F9",
+        "id": "55:12:B5:5C:DE:06",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5269319,
@@ -841,19 +841,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "6C:3E:48:1D:07:97",
+        "id": "19:0E:05:2D:FF:BE",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5268319,
             "lon": -46.820010499999995
         },
         "status": "active",
-        "linked_to": "40:62:83:CB:19:F9"
+        "linked_to": "55:12:B5:5C:DE:06"
     },
     {
         "source": "from_api",
         "sumo_id": "1846229831",
-        "id": "2D:5A:1D:E7:93:81",
+        "id": "30:19:75:61:E7:46",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5270727,
@@ -864,19 +864,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "7C:34:01:0B:4D:FA",
+        "id": "5F:98:ED:E1:9F:06",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5269727,
             "lon": -46.820101699999995
         },
         "status": "active",
-        "linked_to": "2D:5A:1D:E7:93:81"
+        "linked_to": "30:19:75:61:E7:46"
     },
     {
         "source": "from_api",
         "sumo_id": "1717098953",
-        "id": "BD:7E:97:88:36:32",
+        "id": "C8:F3:B9:51:F4:11",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5241403,
@@ -887,19 +887,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "3A:DA:72:99:15:6A",
+        "id": "F0:F1:6C:7A:37:7A",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5240403,
             "lon": -46.81823249999999
         },
         "status": "active",
-        "linked_to": "BD:7E:97:88:36:32"
+        "linked_to": "C8:F3:B9:51:F4:11"
     },
     {
         "source": "from_api",
         "sumo_id": "1717098972",
-        "id": "60:2D:1E:70:D7:1A",
+        "id": "A1:82:5A:9B:E1:A3",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5247753,
@@ -910,19 +910,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "3C:D6:C9:23:D6:26",
+        "id": "D2:67:74:C8:F1:C7",
         "type": "CAMERA",
         "geo": {
             "lat": -23.524675300000002,
             "lon": -46.8175391
         },
         "status": "active",
-        "linked_to": "60:2D:1E:70:D7:1A"
+        "linked_to": "A1:82:5A:9B:E1:A3"
     },
     {
         "source": "from_api",
         "sumo_id": "4427110525",
-        "id": "21:68:E7:E6:37:A9",
+        "id": "FA:57:11:10:A3:5A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5214055,
@@ -933,19 +933,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "1E:C2:C4:89:CF:C1",
+        "id": "9C:0C:B0:2C:0A:C9",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5213055,
             "lon": -46.8324958
         },
         "status": "active",
-        "linked_to": "21:68:E7:E6:37:A9"
+        "linked_to": "FA:57:11:10:A3:5A"
     },
     {
         "source": "from_api",
         "sumo_id": "1156818659",
-        "id": "94:D0:CB:C1:07:C3",
+        "id": "5A:0F:DE:57:BE:F0",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5212082,
@@ -956,19 +956,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "EF:B6:69:A6:18:E0",
+        "id": "FE:93:B7:A1:F1:AC",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5211082,
             "lon": -46.8358352
         },
         "status": "active",
-        "linked_to": "94:D0:CB:C1:07:C3"
+        "linked_to": "5A:0F:DE:57:BE:F0"
     },
     {
         "source": "from_api",
         "sumo_id": "2626998166",
-        "id": "D4:99:5B:85:FA:5A",
+        "id": "5F:E8:51:EC:B0:F4",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.488367,
@@ -979,19 +979,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "0F:61:B2:3C:5F:4D",
+        "id": "DA:53:0C:4E:4F:FD",
         "type": "CAMERA",
         "geo": {
             "lat": -23.488267,
             "lon": -46.832336299999994
         },
         "status": "active",
-        "linked_to": "D4:99:5B:85:FA:5A"
+        "linked_to": "5F:E8:51:EC:B0:F4"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_184049290_445662727",
-        "id": "EE:84:44:35:41:F0",
+        "id": "A7:3A:82:61:63:4D",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.491497350000003,
@@ -1002,19 +1002,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "63:2E:01:26:CC:CF",
+        "id": "0B:88:13:C4:03:69",
         "type": "CAMERA",
         "geo": {
             "lat": -23.491397350000003,
             "lon": -46.8425811
         },
         "status": "active",
-        "linked_to": "EE:84:44:35:41:F0"
+        "linked_to": "A7:3A:82:61:63:4D"
     },
     {
         "source": "from_api",
         "sumo_id": "184052443",
-        "id": "BE:E9:BD:29:2C:A3",
+        "id": "ED:0E:55:B7:7B:09",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5020574,
@@ -1025,19 +1025,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "CC:53:94:0D:6C:94",
+        "id": "68:5B:E9:AE:00:31",
         "type": "CAMERA",
         "geo": {
             "lat": -23.501957400000002,
             "lon": -46.8577653
         },
         "status": "active",
-        "linked_to": "BE:E9:BD:29:2C:A3"
+        "linked_to": "ED:0E:55:B7:7B:09"
     },
     {
         "source": "from_api",
         "sumo_id": "8668899178",
-        "id": "6B:09:B5:D6:9C:EA",
+        "id": "83:40:64:75:C1:04",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5243835,
@@ -1048,19 +1048,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "48:FC:1A:4E:66:7A",
+        "id": "C7:54:E8:80:CC:99",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5242835,
             "lon": -46.8146377
         },
         "status": "active",
-        "linked_to": "6B:09:B5:D6:9C:EA"
+        "linked_to": "83:40:64:75:C1:04"
     },
     {
         "source": "from_api",
         "sumo_id": "133539380",
-        "id": "7A:16:AA:DD:9B:73",
+        "id": "03:5E:F2:94:FF:DD",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.486702,
@@ -1071,19 +1071,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "A8:8B:15:E0:B1:CF",
+        "id": "FD:DC:69:63:D1:22",
         "type": "CAMERA",
         "geo": {
             "lat": -23.486602,
             "lon": -46.8560691
         },
         "status": "active",
-        "linked_to": "7A:16:AA:DD:9B:73"
+        "linked_to": "03:5E:F2:94:FF:DD"
     },
     {
         "source": "from_api",
         "sumo_id": "2212089477",
-        "id": "22:12:5C:70:C0:64",
+        "id": "3B:37:77:F9:4F:45",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4871485,
@@ -1094,19 +1094,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "D1:DC:C5:87:32:05",
+        "id": "92:C0:24:40:91:49",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4870485,
             "lon": -46.8561073
         },
         "status": "active",
-        "linked_to": "22:12:5C:70:C0:64"
+        "linked_to": "3B:37:77:F9:4F:45"
     },
     {
         "source": "from_api",
         "sumo_id": "446308548",
-        "id": "F8:59:2C:02:55:24",
+        "id": "32:FB:EC:29:2E:29",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5088204,
@@ -1117,19 +1117,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "62:B0:C2:53:D5:E0",
+        "id": "F9:E5:E4:E9:E5:9F",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5087204,
             "lon": -46.8157169
         },
         "status": "active",
-        "linked_to": "F8:59:2C:02:55:24"
+        "linked_to": "32:FB:EC:29:2E:29"
     },
     {
         "source": "from_api",
         "sumo_id": "2627129339",
-        "id": "C8:74:95:EE:11:2D",
+        "id": "47:BE:57:4D:B8:08",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4648043,
@@ -1140,19 +1140,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "6B:D5:C9:CE:31:B4",
+        "id": "A1:08:9E:02:B2:FE",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4647043,
             "lon": -46.876948299999995
         },
         "status": "active",
-        "linked_to": "C8:74:95:EE:11:2D"
+        "linked_to": "47:BE:57:4D:B8:08"
     },
     {
         "source": "from_api",
         "sumo_id": "4425588097",
-        "id": "49:D8:00:8E:74:65",
+        "id": "F6:08:6E:18:E7:54",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5128803,
@@ -1163,19 +1163,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "6A:A3:9E:83:B2:6C",
+        "id": "FE:E5:AF:8D:60:AE",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5127803,
             "lon": -46.8799036
         },
         "status": "active",
-        "linked_to": "49:D8:00:8E:74:65"
+        "linked_to": "F6:08:6E:18:E7:54"
     },
     {
         "source": "from_api",
         "sumo_id": "2367383858",
-        "id": "54:D7:1B:F2:F8:3D",
+        "id": "20:F5:6B:F2:BE:2B",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5131875,
@@ -1186,19 +1186,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "EF:5E:BB:80:28:4A",
+        "id": "A7:37:42:50:9F:91",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5130875,
             "lon": -46.8757035
         },
         "status": "active",
-        "linked_to": "54:D7:1B:F2:F8:3D"
+        "linked_to": "20:F5:6B:F2:BE:2B"
     },
     {
         "source": "from_api",
         "sumo_id": "148579251",
-        "id": "12:F3:F0:54:13:DA",
+        "id": "24:A0:1B:A3:E0:73",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.501546,
@@ -1209,19 +1209,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "6A:CA:87:9B:6A:4E",
+        "id": "FC:AF:73:91:21:B1",
         "type": "CAMERA",
         "geo": {
             "lat": -23.501446,
             "lon": -46.8369515
         },
         "status": "active",
-        "linked_to": "12:F3:F0:54:13:DA"
+        "linked_to": "24:A0:1B:A3:E0:73"
     },
     {
         "source": "from_api",
         "sumo_id": "5538995525",
-        "id": "30:53:03:BF:C7:E7",
+        "id": "C6:ED:AD:7E:86:0D",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5022419,
@@ -1232,19 +1232,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "22:B0:52:A1:94:8D",
+        "id": "77:12:2A:60:67:28",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5021419,
             "lon": -46.861125099999995
         },
         "status": "active",
-        "linked_to": "30:53:03:BF:C7:E7"
+        "linked_to": "C6:ED:AD:7E:86:0D"
     },
     {
         "source": "from_api",
         "sumo_id": "6817945998",
-        "id": "BE:E2:E1:FA:3F:B8",
+        "id": "EB:0D:DF:BB:60:3A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4920894,
@@ -1255,19 +1255,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "4F:63:EB:BB:40:83",
+        "id": "43:1A:FE:83:F3:6A",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4919894,
             "lon": -46.880744099999994
         },
         "status": "active",
-        "linked_to": "BE:E2:E1:FA:3F:B8"
+        "linked_to": "EB:0D:DF:BB:60:3A"
     },
     {
         "source": "from_api",
         "sumo_id": "8080490284",
-        "id": "6C:DD:72:3D:6B:13",
+        "id": "18:7C:BB:A8:88:18",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5083594,
@@ -1278,19 +1278,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "2D:97:52:DC:46:6A",
+        "id": "8F:F2:5E:B2:64:DB",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5082594,
             "lon": -46.850474899999995
         },
         "status": "active",
-        "linked_to": "6C:DD:72:3D:6B:13"
+        "linked_to": "18:7C:BB:A8:88:18"
     },
     {
         "source": "from_api",
         "sumo_id": "133514243",
-        "id": "C6:1D:85:D3:9F:B9",
+        "id": "D5:58:E0:AE:09:C4",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5084306,
@@ -1301,19 +1301,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "60:EC:C8:1F:1D:07",
+        "id": "6B:9B:B4:66:1E:39",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5083306,
             "lon": -46.850692599999995
         },
         "status": "active",
-        "linked_to": "C6:1D:85:D3:9F:B9"
+        "linked_to": "D5:58:E0:AE:09:C4"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_4292016976_4292016979_4427155300_765184593_#1more",
-        "id": "C1:9F:D6:CA:00:6D",
+        "id": "0F:38:1F:5F:0A:2B",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.502097225,
@@ -1324,19 +1324,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "29:DF:F1:49:F0:CB",
+        "id": "E2:3C:86:7F:F2:4E",
         "type": "CAMERA",
         "geo": {
             "lat": -23.501997225,
             "lon": -46.835058925
         },
         "status": "active",
-        "linked_to": "C1:9F:D6:CA:00:6D"
+        "linked_to": "0F:38:1F:5F:0A:2B"
     },
     {
         "source": "from_api",
         "sumo_id": "148578688",
-        "id": "05:57:3F:33:D2:87",
+        "id": "DB:70:6F:EA:D9:51",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5026574,
@@ -1347,19 +1347,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "8E:62:12:D0:09:10",
+        "id": "A0:90:56:44:B6:09",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5025574,
             "lon": -46.832171699999996
         },
         "status": "active",
-        "linked_to": "05:57:3F:33:D2:87"
+        "linked_to": "DB:70:6F:EA:D9:51"
     },
     {
         "source": "from_api",
         "sumo_id": "joinedS_148575335_148577946",
-        "id": "78:8B:B4:65:E3:1E",
+        "id": "3B:28:9C:F4:1A:3F",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.502970400000002,
@@ -1370,19 +1370,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "1B:44:91:E8:FA:19",
+        "id": "4E:81:EA:99:47:E2",
         "type": "CAMERA",
         "geo": {
             "lat": -23.502870400000003,
             "lon": -46.83205995
         },
         "status": "active",
-        "linked_to": "78:8B:B4:65:E3:1E"
+        "linked_to": "3B:28:9C:F4:1A:3F"
     },
     {
         "source": "from_api",
         "sumo_id": "148578587",
-        "id": "B1:0D:FA:59:7A:9F",
+        "id": "A1:D7:B4:77:4E:88",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5027024,
@@ -1393,19 +1393,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "2D:05:FE:2B:DB:74",
+        "id": "AF:25:E2:2C:EB:20",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5026024,
             "lon": -46.831829799999994
         },
         "status": "active",
-        "linked_to": "B1:0D:FA:59:7A:9F"
+        "linked_to": "A1:D7:B4:77:4E:88"
     },
     {
         "source": "from_api",
         "sumo_id": "2332218271",
-        "id": "B9:68:10:E5:E8:0E",
+        "id": "7B:F2:0F:A2:7F:7A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.488443,
@@ -1416,19 +1416,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "93:3F:B1:09:0E:8F",
+        "id": "5D:EF:4E:37:E7:33",
         "type": "CAMERA",
         "geo": {
             "lat": -23.488343,
             "lon": -46.83236539999999
         },
         "status": "active",
-        "linked_to": "B9:68:10:E5:E8:0E"
+        "linked_to": "7B:F2:0F:A2:7F:7A"
     },
     {
         "source": "from_api",
         "sumo_id": "7927170334",
-        "id": "B6:8E:24:6A:66:D0",
+        "id": "98:D2:0F:B4:66:80",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5085437,
@@ -1439,19 +1439,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "05:DC:B7:6A:F6:B3",
+        "id": "38:45:87:2B:E2:86",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5084437,
             "lon": -46.850815299999994
         },
         "status": "active",
-        "linked_to": "B6:8E:24:6A:66:D0"
+        "linked_to": "98:D2:0F:B4:66:80"
     },
     {
         "source": "from_api",
         "sumo_id": "6929701996",
-        "id": "4E:2F:28:6E:27:AB",
+        "id": "34:2E:26:05:12:B8",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5085081,
@@ -1462,19 +1462,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "02:54:BF:43:9A:63",
+        "id": "C3:A3:14:65:22:42",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5084081,
             "lon": -46.8506973
         },
         "status": "active",
-        "linked_to": "4E:2F:28:6E:27:AB"
+        "linked_to": "34:2E:26:05:12:B8"
     },
     {
         "source": "from_api",
         "sumo_id": "11215456434",
-        "id": "FF:69:B6:AE:05:28",
+        "id": "5F:00:49:F0:11:F1",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5084362,
@@ -1485,19 +1485,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "23:AB:B6:4A:81:09",
+        "id": "3F:CC:4D:BC:A6:80",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5083362,
             "lon": -46.8504807
         },
         "status": "active",
-        "linked_to": "FF:69:B6:AE:05:28"
+        "linked_to": "5F:00:49:F0:11:F1"
     },
     {
         "source": "from_api",
         "sumo_id": "5076412050",
-        "id": "DF:4C:6C:49:74:1F",
+        "id": "B6:E5:46:A5:B7:8A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5171463,
@@ -1508,19 +1508,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "58:1B:94:10:42:CC",
+        "id": "47:C9:E4:76:BA:BA",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5170463,
             "lon": -46.840500399999996
         },
         "status": "active",
-        "linked_to": "DF:4C:6C:49:74:1F"
+        "linked_to": "B6:E5:46:A5:B7:8A"
     },
     {
         "source": "from_api",
         "sumo_id": "959685054",
-        "id": "57:52:20:AB:67:C8",
+        "id": "86:18:DE:F1:22:1F",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5172018,
@@ -1531,19 +1531,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "9F:A4:E1:E1:CE:76",
+        "id": "C3:53:48:CA:DA:FC",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5171018,
             "lon": -46.8396419
         },
         "status": "active",
-        "linked_to": "57:52:20:AB:67:C8"
+        "linked_to": "86:18:DE:F1:22:1F"
     },
     {
         "source": "from_api",
         "sumo_id": "1838952201",
-        "id": "54:B0:BF:51:02:13",
+        "id": "88:BD:F6:04:30:F0",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5174515,
@@ -1554,19 +1554,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "35:BC:60:72:24:A5",
+        "id": "4E:44:F3:5F:85:5C",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5173515,
             "lon": -46.838823399999995
         },
         "status": "active",
-        "linked_to": "54:B0:BF:51:02:13"
+        "linked_to": "88:BD:F6:04:30:F0"
     },
     {
         "source": "from_api",
         "sumo_id": "1946803442",
-        "id": "1E:CA:35:EC:05:A7",
+        "id": "0D:DF:D9:47:3C:8B",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5187914,
@@ -1577,19 +1577,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "68:8D:5B:31:FF:CE",
+        "id": "DF:AF:18:9D:37:EF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5186914,
             "lon": -46.8372483
         },
         "status": "active",
-        "linked_to": "1E:CA:35:EC:05:A7"
+        "linked_to": "0D:DF:D9:47:3C:8B"
     },
     {
         "source": "from_api",
         "sumo_id": "5076412027",
-        "id": "FD:AA:32:11:DA:FC",
+        "id": "E0:65:2F:B2:3C:57",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.517275,
@@ -1600,19 +1600,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "0A:C6:EF:52:4E:DB",
+        "id": "35:AD:1E:69:E1:2F",
         "type": "CAMERA",
         "geo": {
             "lat": -23.517175,
             "lon": -46.846468099999996
         },
         "status": "active",
-        "linked_to": "FD:AA:32:11:DA:FC"
+        "linked_to": "E0:65:2F:B2:3C:57"
     },
     {
         "source": "from_api",
         "sumo_id": "959685044",
-        "id": "AC:D6:7E:18:72:5D",
+        "id": "47:73:E4:EC:50:44",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5235222,
@@ -1623,19 +1623,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "77:4C:5B:15:6F:7C",
+        "id": "CD:A6:CA:29:40:C0",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5234222,
             "lon": -46.8241477
         },
         "status": "active",
-        "linked_to": "AC:D6:7E:18:72:5D"
+        "linked_to": "47:73:E4:EC:50:44"
     },
     {
         "source": "from_api",
         "sumo_id": "9703810031",
-        "id": "26:4C:BA:79:0F:4E",
+        "id": "E1:F3:76:2A:73:BD",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5236276,
@@ -1646,19 +1646,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "A7:B6:7D:18:2A:67",
+        "id": "0D:FE:BB:26:CA:FA",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5235276,
             "lon": -46.823773599999996
         },
         "status": "active",
-        "linked_to": "26:4C:BA:79:0F:4E"
+        "linked_to": "E1:F3:76:2A:73:BD"
     },
     {
         "source": "from_api",
         "sumo_id": "184049229",
-        "id": "58:4D:F9:DE:AF:C5",
+        "id": "D8:EC:38:0D:C8:6E",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5001739,
@@ -1669,19 +1669,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "97:0E:D8:79:DA:32",
+        "id": "D2:DB:5B:80:8D:EF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5000739,
             "lon": -46.8427343
         },
         "status": "active",
-        "linked_to": "58:4D:F9:DE:AF:C5"
+        "linked_to": "D8:EC:38:0D:C8:6E"
     },
     {
         "source": "from_api",
         "sumo_id": "1732485896",
-        "id": "3F:0C:A6:C4:35:CB",
+        "id": "A4:2B:83:5C:D1:72",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4982853,
@@ -1692,19 +1692,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "E7:47:E3:E3:52:D6",
+        "id": "DD:2D:AA:5B:B4:DF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4981853,
             "lon": -46.876946399999994
         },
         "status": "active",
-        "linked_to": "3F:0C:A6:C4:35:CB"
+        "linked_to": "A4:2B:83:5C:D1:72"
     },
     {
         "source": "from_api",
         "sumo_id": "4710980189",
-        "id": "B6:23:24:75:42:99",
+        "id": "A2:A8:68:66:0D:BD",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5034309,
@@ -1715,19 +1715,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "3A:1C:DE:2B:CA:C8",
+        "id": "C0:63:DE:1A:91:49",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5033309,
             "lon": -46.8790104
         },
         "status": "active",
-        "linked_to": "B6:23:24:75:42:99"
+        "linked_to": "A2:A8:68:66:0D:BD"
     },
     {
         "source": "from_api",
         "sumo_id": "8099563457",
-        "id": "EC:3B:EE:FE:B6:72",
+        "id": "1C:8F:D0:DE:7B:A5",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5127496,
@@ -1738,19 +1738,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "5C:39:B2:5F:72:CD",
+        "id": "04:4C:6D:AD:74:F8",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5126496,
             "lon": -46.8798566
         },
         "status": "active",
-        "linked_to": "EC:3B:EE:FE:B6:72"
+        "linked_to": "1C:8F:D0:DE:7B:A5"
     },
     {
         "source": "from_api",
         "sumo_id": "2367380291",
-        "id": "49:92:E9:86:D8:66",
+        "id": "52:98:40:8D:6F:EA",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5130047,
@@ -1761,19 +1761,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "54:4F:48:C7:DE:98",
+        "id": "86:50:68:DA:87:D9",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5129047,
             "lon": -46.8757211
         },
         "status": "active",
-        "linked_to": "49:92:E9:86:D8:66"
+        "linked_to": "52:98:40:8D:6F:EA"
     },
     {
         "source": "from_api",
         "sumo_id": "651116440",
-        "id": "73:A4:BC:E6:DE:F3",
+        "id": "FA:4A:BD:EF:3B:BD",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5111205,
@@ -1784,19 +1784,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "B5:CB:9B:98:7B:CF",
+        "id": "60:B9:DA:E2:F8:66",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5110205,
             "lon": -46.8778838
         },
         "status": "active",
-        "linked_to": "73:A4:BC:E6:DE:F3"
+        "linked_to": "FA:4A:BD:EF:3B:BD"
     },
     {
         "source": "from_api",
         "sumo_id": "2628338479",
-        "id": "78:96:7D:A7:29:9A",
+        "id": "87:52:05:BF:41:EE",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4645679,
@@ -1807,19 +1807,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "A7:C5:51:BC:C4:D9",
+        "id": "2B:B1:9F:06:0F:E1",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4644679,
             "lon": -46.870718
         },
         "status": "active",
-        "linked_to": "78:96:7D:A7:29:9A"
+        "linked_to": "87:52:05:BF:41:EE"
     },
     {
         "source": "from_api",
         "sumo_id": "6133119257",
-        "id": "68:18:B1:E5:24:83",
+        "id": "7B:C3:29:F6:2F:7A",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.4885843,
@@ -1830,19 +1830,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "19:2F:2E:9F:A9:25",
+        "id": "7F:8A:84:B8:B3:D7",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4884843,
             "lon": -46.8813733
         },
         "status": "active",
-        "linked_to": "68:18:B1:E5:24:83"
+        "linked_to": "7B:C3:29:F6:2F:7A"
     },
     {
         "source": "from_api",
         "sumo_id": "2367358495",
-        "id": "54:41:C8:AC:03:90",
+        "id": "05:DF:74:AF:D2:8E",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5245399,
@@ -1853,19 +1853,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "86:DB:39:46:0D:FA",
+        "id": "FC:F0:62:11:2C:09",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5244399,
             "lon": -46.814693299999995
         },
         "status": "active",
-        "linked_to": "54:41:C8:AC:03:90"
+        "linked_to": "05:DF:74:AF:D2:8E"
     },
     {
         "source": "from_api",
         "sumo_id": "1717098915",
-        "id": "75:EF:7A:1F:D3:54",
+        "id": "8F:52:C4:3A:64:10",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5235722,
@@ -1876,19 +1876,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "19:80:28:BE:E2:74",
+        "id": "8D:ED:B9:26:0C:CC",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5234722,
             "lon": -46.8178315
         },
         "status": "active",
-        "linked_to": "75:EF:7A:1F:D3:54"
+        "linked_to": "8F:52:C4:3A:64:10"
     },
     {
         "source": "from_api",
         "sumo_id": "5883183452",
-        "id": "AD:5A:D1:BC:42:BC",
+        "id": "63:F6:ED:6D:10:6D",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5000565,
@@ -1899,19 +1899,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "66:32:93:91:D3:78",
+        "id": "9D:0A:8B:A6:97:55",
         "type": "CAMERA",
         "geo": {
             "lat": -23.4999565,
             "lon": -46.8637247
         },
         "status": "active",
-        "linked_to": "AD:5A:D1:BC:42:BC"
+        "linked_to": "63:F6:ED:6D:10:6D"
     },
     {
         "source": "from_api",
         "sumo_id": "4717230594",
-        "id": "C6:83:03:0F:5C:B5",
+        "id": "A4:27:9B:25:93:E7",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5021726,
@@ -1922,19 +1922,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "71:1F:38:E5:32:5F",
+        "id": "FE:0A:2C:CE:72:9C",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5020726,
             "lon": -46.8610695
         },
         "status": "active",
-        "linked_to": "C6:83:03:0F:5C:B5"
+        "linked_to": "A4:27:9B:25:93:E7"
     },
     {
         "source": "from_api",
         "sumo_id": "446308547",
-        "id": "D7:AD:DC:FE:47:6A",
+        "id": "5B:35:FA:E3:5F:95",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5087617,
@@ -1945,19 +1945,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "8C:2A:98:5B:49:D1",
+        "id": "D1:59:58:50:74:99",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5086617,
             "lon": -46.815249699999995
         },
         "status": "active",
-        "linked_to": "D7:AD:DC:FE:47:6A"
+        "linked_to": "5B:35:FA:E3:5F:95"
     },
     {
         "source": "from_api",
         "sumo_id": "6042752981",
-        "id": "8A:B4:89:E7:1B:1B",
+        "id": "68:7B:3C:92:D9:45",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5001126,
@@ -1968,19 +1968,19 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "7E:71:EC:20:02:58",
+        "id": "25:72:A4:66:3F:CF",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5000126,
             "lon": -46.848173599999996
         },
         "status": "active",
-        "linked_to": "8A:B4:89:E7:1B:1B"
+        "linked_to": "68:7B:3C:92:D9:45"
     },
     {
         "source": "from_api",
         "sumo_id": "6060994012",
-        "id": "62:D5:10:47:2A:D3",
+        "id": "77:95:1F:4E:12:74",
         "type": "SEMAFARO",
         "geo": {
             "lat": -23.5002421,
@@ -1991,13 +1991,13 @@
     {
         "source": "from_api",
         "sumo_id": null,
-        "id": "7A:7E:9A:5C:22:C2",
+        "id": "6E:E6:B1:03:CE:03",
         "type": "CAMERA",
         "geo": {
             "lat": -23.5001421,
             "lon": -46.848152999999996
         },
         "status": "active",
-        "linked_to": "62:D5:10:47:2A:D3"
+        "linked_to": "77:95:1F:4E:12:74"
     }
 ]

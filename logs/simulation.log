@@ -1,455 +1,553 @@
-[2025-11-24 01:37:24] [WARNING ] [ShellScript  ] : SISTEMA LIMPO PELO USUÁRIO
+[2025-11-24 19:10:38] [WARNING ] [ShellScript  ] : SISTEMA LIMPO PELO USUÁRIO
 ----------------------------------------------------------------
-[2025-11-24 01:37:27] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
-[2025-11-24 01:37:27] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
-[2025-11-24 01:37:31] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (UPDATED) ===
-[2025-11-24 01:37:31] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (UPDATED) ===
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7dc2e967fa00>
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x7dc2e963f2c0> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7dc2e967f9d0>
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'DELETE']>
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'DELETE') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 2 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 6 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?mac_address=neq.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 28 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'prefer', b'return=representation') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 15 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'content-length', b'2') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 28 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 1 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Adding (b'content-type', b'application/json') to the header table, sensitive:False, huffman:True
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 31 with 6 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 01:37:32] [DEBUG   ] [hpack.hpack] : Encoded header block to b"B\x86\xbf\x83>\r\xf8?A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed'\x85\xd1mc\x8ch*\xe4?\x87D\x9cb\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe5#$C\x92K\n\x84AQ{.\x0fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.'\x97\x0f@\x85\xae\xc2\xca[?\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?\\\x81\x17_\x8b\x1du\xd0b\r&=LtA\xea"
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : send_request_body.complete
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
-[2025-11-24 01:37:32] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x97\xd0z\xbe\x94\x13Ji?u\x04\x016\xa0\x1a\xb8\xcb\xb7\x19mLZ7\xff_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x03*/*@\x85$\xabX?_\x8f|l\xb8\xcb\x8c\xb8\xe4\xad\xc80\xbaU\xb1m\xe1@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xabx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8d\xae\xc2\xca[\x0bQ\n\xb0\xeb\xae\x83\x16O\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x9a\x00_\x1cm\t\xd5\x82P\x15g^|\xab\x0c\x0f8\xb0\x9b,\xae\xbc\xe9[\x8d\xc6\xff@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x82lBw\xffV\x8a"K\x14t\xc0\x87\xffo\xef\xcfZx\xe9\xcb\xe5|\xba\xb4t\xc7\xceD5\xa2$#^\x83\x8b\xbfi\x91\xb2\x8cQ~\xfb\xee\xf75\x82\xeb\x8c\xbe\xdb\xe0m\xb5\x82\xb8\x17\n\xe1[\x95\x90\xfe{\xb3f\x079v\x1b_\xba\xff!\x88\x7f\x83\xc4\xe5\xea\xc79Q\x8b\x1e\xc3\x19\xc9\xfa\xf3z\xc9sp\xe5\xe4\xc4$%\xf1MW\xcc\xcbW\x91\xe7\xf7\xf2\x9f;\xeb#2^\xc9\x97w>\x8dh\xc3\x922\xee)\xe3\xdf\x08Z\x9b\x0e\xab\xe8\xe3\xc1~\\h\x06\x88\xce\x19\x91\xf6\xa5cL\xf01\xf6\xa1|\xd6k\n\x884\x1e\xaf\xa5\x04\xd2\xdaO\xdda6\xa0\x1b\xb8\x07n2\xda\x98\xb4o\xfbRC\xd23U\x02\xe8\xb6\xb1\xc64\x15r\x1f\xedLiMz\xaa\xa3\xd7\xda\x9b\x8aKl/\xda\x9b\x87Iw\x19%\x83I\xea/@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 23, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Mon, 24 Nov 2025 04:37:35 GMT'), total consumed 25 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', <memory at 0x7dc2e977a740>), total consumed 5 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a3636366f5da17e-GRU'), total consumed 23 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'preference-applied', b'return=representation'), total consumed 31 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x7dc2e977a680>), total consumed 17 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ab427-1e0e-789e-a086-25ef787e5b65'), total consumed 39 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x7dc2e977a8c0>), total consumed 19 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', b'522'), total consumed 26 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 213, consumed 2 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=s9ZDTLptVNJx.JOMjHYds4M_ssPMo2vqgsQlG_Zzv8Y-1763959055-1.0.1.1-WrAXzrQE6Wqa4ZPXA_aXaG6CpahesGHQii6hkY8rfKUWxiccAewmnDi34CsxZXmxTpc3dCIJSYj4MFIbeSeobTA14gFODsVU.WVl0Mbo1gs; path=/; expires=Mon, 24-Nov-25 05:07:35 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 216 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 01:37:34] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
-[2025-11-24 01:37:34] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Mon, 24 Nov 2025 04:37:35 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'*/*'), (b'cf-ray', b'9a3636366f5da17e-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'preference-applied', b'return=representation'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ab427-1e0e-789e-a086-25ef787e5b65'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'522'), (b'set-cookie', b'__cf_bm=s9ZDTLptVNJx.JOMjHYds4M_ssPMo2vqgsQlG_Zzv8Y-1763959055-1.0.1.1-WrAXzrQE6Wqa4ZPXA_aXaG6CpahesGHQii6hkY8rfKUWxiccAewmnDi34CsxZXmxTpc3dCIJSYj4MFIbeSeobTA14gFODsVU.WVl0Mbo1gs; path=/; expires=Mon, 24-Nov-25 05:07:35 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
-[2025-11-24 01:37:34] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 01:37:34] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 01:37:34] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 01:37:34] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
-[2025-11-24 01:37:34] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
-[2025-11-24 01:37:34] [DEBUG   ] [httpcore.http2] : response_closed.complete
->>> 📡 Sync API -> Supabase...
-📂 Processando 87 dispositivos...
-✅ SUCESSO! 174 registros sincronizados.
-[2025-11-24 01:41:23] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 01:41:23] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 01:41:23] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
+[2025-11-24 19:10:43] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
+[2025-11-24 19:10:43] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
+[2025-11-24 19:10:53] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (COLORED PINS) ===
+[2025-11-24 19:10:53] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (COLORED PINS) ===
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7a01a7315720>
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x7a01a72fcf40> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7a01a73156f0>
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'DELETE']>
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'DELETE') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 2 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 6 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?mac_address=neq.0') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 28 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'prefer', b'return=representation') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 15 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'content-length', b'2') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 28 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 1 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Adding (b'content-type', b'application/json') to the header table, sensitive:False, huffman:True
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 31 with 6 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-24 19:10:55] [DEBUG   ] [hpack.hpack] : Encoded header block to b"B\x86\xbf\x83>\r\xf8?A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed'\x85\xd1mc\x8ch*\xe4?\x87D\x9cb\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe5#$C\x92K\n\x84AQ{.\x0fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.'\x97\x0f@\x85\xae\xc2\xca[?\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?\\\x81\x17_\x8b\x1du\xd0b\r&=LtA\xea"
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : send_request_body.complete
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
+[2025-11-24 19:10:55] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x96\xd0z\xbe\x94\x13Ji?u\x04\x016\xa0\x85p \xb8\xdb\x8ab\xd1\xbf_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x03*/*@\x85$\xabX?_\x8f|l\x91\x99\x19 ct\xa0\x1c\x80[\x16\xde\x1f@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xabx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8d\xae\xc2\xca[\x0bQ\n\xb0\xeb\xae\x83\x16O\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x9a\x00_\x1cn\x965\x9e\x0b\xf2\xac\xeb\xb2\x8dg\xe3,\x8b\x05\xd2F\xe4b\x90\x0c\x82_@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x0213w\xffW\x8a"K\x14t\xc1\x8a\x1c\xf5\xc2-\xdd\x07\xfb\xdd\x7f)L\xbc\xf4P\x1f~\xbaf\xd1o\xee\x0cC h]\xbf\xc8\xe8\xbe\xe4\xec\xf3X.\xb8\xd0\x04!6\xe2\xc1\\\x0b\x85p\xad\xd1\xcc\xfb\xab\xcb_\xb9:5\x97\x16+\xdb\xd1\x87\xf2\x9d\xda&g\xb3Z{\xe3\x90[\x12!\x86\x93\xfeO\xba\x9e\xe8\xc4\xd3z\xb4B\x8a\xe8d\x15p{\xa0=^\x93e\xb96a\x1f\x9cV~m\xaf\xdb\xfa\xe5\xf7\xc0\xd9\x85\x1dw\xfaU\xef\x1c\xedv\xdd~}\xf4~\xaf\x8b\xc7\xac\x06\xc1\xf6\xa5cL\xf01\xf6\xa1|\xd6k\n\x884\x1e\xaf\xa5\x04\xd2\xdaO\xdda6\xa0\x85q\xa0\\m\xc51h\xdf\xf6\xa4\x87\xa4f\xaa\x05\xd1mc\x8ch*\xe4?\xda\x98\xd2\x9a\xf5UG\xaf\xb57\x14\x96\xd8_\xb57\x0e\x92\xee2K\x06\x93\xd4_@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Mon, 24 Nov 2025 22:10:56 GMT'), total consumed 24 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', <memory at 0x7a01a72c50c0>), total consumed 5 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a3c3d3c1b7e0ad0-GRU'), total consumed 23 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'preference-applied', b'return=representation'), total consumed 31 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x7a01a72c5000>), total consumed 17 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ab7eb-819f-77fa-9bed-17cb6b2d030f'), total consumed 39 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x7a01a72c5240>), total consumed 19 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', <memory at 0x7a01a72c5300>), total consumed 26 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 214, consumed 2 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=GALpA2SjaZv.xttfYMl1zyjKMuZEGac1l.5XblD6h3Y-1764022256-1.0.1.1-j6LSpJpzdj4JGGCTsFXmSMg3q4NvHd2Qt2a1moXhSmvsG45OMAspl30nU8j0yCdQuIQFaxGrXRpz9PfzUiK2bpDjnzHh4qSDhTlZ.GwyEiE; path=/; expires=Mon, 24-Nov-25 22:40:56 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 217 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-24 19:10:56] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
+[2025-11-24 19:10:56] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Mon, 24 Nov 2025 22:10:56 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'*/*'), (b'cf-ray', b'9a3c3d3c1b7e0ad0-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'preference-applied', b'return=representation'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ab7eb-819f-77fa-9bed-17cb6b2d030f'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'13'), (b'set-cookie', b'__cf_bm=GALpA2SjaZv.xttfYMl1zyjKMuZEGac1l.5XblD6h3Y-1764022256-1.0.1.1-j6LSpJpzdj4JGGCTsFXmSMg3q4NvHd2Qt2a1moXhSmvsG45OMAspl30nU8j0yCdQuIQFaxGrXRpz9PfzUiK2bpDjnzHh4qSDhTlZ.GwyEiE; path=/; expires=Mon, 24-Nov-25 22:40:56 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
+[2025-11-24 19:10:56] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
+[2025-11-24 19:10:56] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
+[2025-11-24 19:10:56] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-24 19:10:56] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
+[2025-11-24 19:10:56] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
+[2025-11-24 19:10:56] [DEBUG   ] [httpcore.http2] : response_closed.complete
+[2025-11-24 19:10:56] [INFO    ] [ScenarioGeneratorAPI] : Banco limpo.
+[2025-11-24 19:10:56] [INFO    ] [ScenarioGeneratorAPI] : Banco limpo.
+=== DB SYNC INICIADO ===
+Conectando ao Supabase...
+Lendo 174 dispositivos do manifesto...
+Tentando inserir 174 registros...
+SUCESSO! Dados sincronizados.
+[2025-11-24 19:12:13] [INFO    ] [ScenarioGeneratorAPI] : Sync DB OK
+[2025-11-24 19:12:13] [INFO    ] [ScenarioGeneratorAPI] : Sync DB OK
+[2025-11-24 19:12:13] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
+[2025-11-24 19:12:13] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
+[2025-11-24 19:12:13] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
 ----------------------------------------------------------------
-[2025-11-24 02:45:37] [DEBUG   ] [ShellScript  ] : INICIO: Gerando OSM...
-[2025-11-24 02:45:37] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_osm --input osm_bbox.osm.xml --vehicles 1000 --duration 3600
-[2025-11-24 02:45:41] [INFO    ] [ScenarioGeneratorOSM] : === GERAÇÃO OSM: MAPA 'OSM_VALIDACAO' (OFFLINE) ===
-[2025-11-24 02:45:41] [INFO    ] [ScenarioGeneratorOSM] : === GERAÇÃO OSM: MAPA 'OSM_VALIDACAO' (OFFLINE) ===
-[2025-11-24 02:45:51] [INFO    ] [ScenarioGeneratorOSM] : === CONCLUÍDO (FROM_OSM) ===
-[2025-11-24 02:45:51] [INFO    ] [ScenarioGeneratorOSM] : === CONCLUÍDO (FROM_OSM) ===
-[2025-11-24 02:45:52] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
 ----------------------------------------------------------------
-[2025-11-24 03:17:00] [DEBUG   ] [ShellScript  ] : INICIO: Gerando Dashboard Logs...
-[2025-11-24 03:17:00] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.traffic_analyzer --source logs
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/mnt/c/UNIP/sumo-beck/src/tcc_sumo/tools/traffic_analyzer.py", line 3, in <module>
-    import pandas as pd
-ModuleNotFoundError: No module named 'pandas'
-[2025-11-24 03:17:00] [ERROR   ] [ShellScript  ] : FIM: ERRO (1)
+[2025-11-26 21:09:38] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
+[2025-11-26 21:09:38] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
+[2025-11-26 21:09:55] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (COLORED PINS) ===
+[2025-11-26 21:09:55] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (COLORED PINS) ===
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x77dadde254e0>
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x77dadde08f40> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x77dadde254b0>
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'DELETE']>
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'DELETE') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 2 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 6 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?mac_address=neq.0') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 28 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'prefer', b'return=representation') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 15 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'content-length', b'2') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 28 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 1 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Adding (b'content-type', b'application/json') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 31 with 6 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Encoded header block to b"B\x86\xbf\x83>\r\xf8?A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed'\x85\xd1mc\x8ch*\xe4?\x87D\x9cb\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe5#$C\x92K\n\x84AQ{.\x0fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.'\x97\x0f@\x85\xae\xc2\xca[?\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?\\\x81\x17_\x8b\x1du\xd0b\r&=LtA\xea"
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : send_request_body.complete
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
+[2025-11-26 21:10:01] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x96\xdf=\xbfJ\t\xd54\x9f\xba\x82\x00\x9bP\x00\xb8\x10\\\x00T\xc5\xa3\x7f_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x03*/*@\x85$\xabX?_\x8f|mH\xe3\x8eH\x17\xdc#\x82z5\xb1m\xe1@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xabx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8d\xae\xc2\xca[\x0bQ\n\xb0\xeb\xae\x83\x16O\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x9a\x00_\x19\x046\xd6h\x0c\xb2\xb3\xb2\x0eU\x9f\x03N,R\x11\xd6\xdbq\x92:\xd3\x9f@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x0269w\xffY\x8a"K\x14t\xc0\xfc]6\xfe\x00\\\xeb\x9b\xf7\x05\xb8tq\xfd\xe5\xd3C\xb8\xb3\xf9\xa0\x1d\xf9e6]8\xa3\xcb\xc72\x11\x85\xed\x08X.\xb8\xd0\x80!\x00+\x05p.\x15\xc2\xb3P\xcb\x8a4vH}\xdf\xc9\x83j1:\x9e\x9d\xb9\xf8\x96\xf2\xf4C\xfb\x1f\xa8p\xbe?\x18\x7f4`\xe3\xeb\xd7-h\xc9\xb1\r\xc3\xbb\xf2Wys7\xe6\xff\xcb\xbeS\x8c\xda)\xfc\xd5\xe6n\x9f\x9c\xf5\x13\xbf\xe5\x16\xc9Vl\xf87\xce\x08\xbc\xbd\xbf\xa8/\xed\xc3\xd3T\xae\xf7\xd9\xc6\x1e[>\xd4\xaci\x9e\x06>\xd4/\x9a\xcdaQ\x06\xf9\xed\xfaPN\xad\xa4\xfd\xd6\x13j\x00\x17\x1a\x05\xc0\x05LZ7\xfd\xa9!\xe9\x19\xaa\x81t[X\xe3\x1a\n\xb9\x0f\xf6\xa64\xa6\xbdUQ\xeb\xedM\xc5%\xb6\x17\xedM\xc3\xa4\xbb\x8c\x92\xc1\xa4\xf5\x17@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
+[2025-11-26 21:10:01] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Thu, 27 Nov 2025 00:10:01 GMT'), total consumed 24 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', <memory at 0x77dadddd10c0>), total consumed 5 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a4d666d196c628b-GRU'), total consumed 23 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'preference-applied', b'return=representation'), total consumed 31 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x77dadddd1000>), total consumed 17 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ac2a5-4033-7daf-9046-ecc75563c746'), total consumed 39 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x77dadddd1240>), total consumed 19 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', <memory at 0x77dadddd1300>), total consumed 26 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 216, consumed 2 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=9_jRX02YpgZEuFMVZWjM7GLxl0vWJiJNGbJVKssF8Ms-1764202201-1.0.1.1-4AfGbsqt1zDIERsG7tjqYwfC.lAZbyAF9awFXMEVyyWPsIQs5ASXf7WYiXTXBxtHiMmXOxgjXYOcvXludnKLETh0_x8Tk0DRFjOf7vQVAWQ; path=/; expires=Thu, 27-Nov-25 00:40:01 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 219 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:10:02] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
+[2025-11-26 21:10:02] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Thu, 27 Nov 2025 00:10:01 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'*/*'), (b'cf-ray', b'9a4d666d196c628b-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'preference-applied', b'return=representation'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ac2a5-4033-7daf-9046-ecc75563c746'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'69'), (b'set-cookie', b'__cf_bm=9_jRX02YpgZEuFMVZWjM7GLxl0vWJiJNGbJVKssF8Ms-1764202201-1.0.1.1-4AfGbsqt1zDIERsG7tjqYwfC.lAZbyAF9awFXMEVyyWPsIQs5ASXf7WYiXTXBxtHiMmXOxgjXYOcvXludnKLETh0_x8Tk0DRFjOf7vQVAWQ; path=/; expires=Thu, 27-Nov-25 00:40:01 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
+[2025-11-26 21:10:02] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
+[2025-11-26 21:10:02] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
+[2025-11-26 21:10:02] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'DELETE']> stream_id=1
+[2025-11-26 21:10:02] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
+[2025-11-26 21:10:02] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
+[2025-11-26 21:10:02] [DEBUG   ] [httpcore.http2] : response_closed.complete
+[2025-11-26 21:10:02] [INFO    ] [ScenarioGeneratorAPI] : Banco limpo.
+[2025-11-26 21:10:02] [INFO    ] [ScenarioGeneratorAPI] : Banco limpo.
+=== DB SYNC INICIADO ===
+Conectando ao Supabase...
+Lendo 174 dispositivos do manifesto...
+Tentando inserir 174 registros...
+SUCESSO! Dados sincronizados.
+[2025-11-26 21:11:22] [INFO    ] [ScenarioGeneratorAPI] : Sync DB OK
+[2025-11-26 21:11:22] [INFO    ] [ScenarioGeneratorAPI] : Sync DB OK
+[2025-11-26 21:11:22] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
+[2025-11-26 21:11:22] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
+[2025-11-26 21:11:23] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
 ----------------------------------------------------------------
-[2025-11-24 03:25:55] [DEBUG   ] [ShellScript  ] : INICIO: Gerando Dashboard Logs...
-[2025-11-24 03:25:55] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.traffic_analyzer --source logs
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/mnt/c/UNIP/sumo-beck/src/tcc_sumo/tools/traffic_analyzer.py", line 5, in <module>
-    from jinja2 import Environment, FileSystemLoader
-ModuleNotFoundError: No module named 'jinja2'
-[2025-11-24 03:26:01] [ERROR   ] [ShellScript  ] : FIM: ERRO (1)
+[2025-11-26 21:17:14] [DEBUG   ] [ShellScript  ] : INICIO: Simulando API (Static)...
+[2025-11-26 21:17:14] [DEBUG   ] [ShellScript  ] : CMD: python3 -m main --scenario api --mode STATIC --target-tl-id ''
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7dce1a894ac0>
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x7dce1a878c40> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7dce1a894a90>
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'GET']>
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'GET') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 2 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 39 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 21:17:34] [DEBUG   ] [hpack.hpack] : Encoded header block to b'\x82A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x85\xd1mc\x8ch*\xe4?\x87D\xa7b\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe2\x0bAH\x98)\x19"\x1c\x92XT!Q^BF\x9bP\xa8\xaf$\xd5\x9fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.\'\x97\x0f@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?'
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : send_request_body.complete
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
+[2025-11-26 21:17:34] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x96\xdf=\xbfJ\t\xd54\x9f\xba\x82\x00\x9bP\x00\xb8\x17n2\xda\x98\xb4o_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x86\x02\xc1u\x96>\x7f@\x85$\xabX?_\x8f|mH\xe8^\x00\x9e\x95\xb9D\xe3\x8bb\xdb\xc3@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xab]\xa2bC"\xb3\xa0\xc97s\xa3\xfcAh)\x13\x05#$C\x92K\n\x84*+\xc8H\xd3j\x15\x15\xe4\x9a\xb3\xffx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x99\x00_\x19\x042,"\x08\x0b:\xeb\xcf\xac7\x08\xea\xcd\xb9#\xa5\x95\x92\xca\xf0\x81@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x82\x0b\xc2w\xffV\x8a"K\x14t\xc1\x969A\xec7\xb5\xe4n,\x199\xb7\x96|\xcb\xbc\xff\xee\xd3\xed\x145\xd0G\x7fsC\x13FkN\xcc\xf2\xf0X.\xb8\xd0\x80\'\x1bm`\xae\x05\xc2\xb8V\xd3\xbb\xbf\xef\x9c\x19\xb1\xc5\x8a]8\x93\xca\xedf\xee\xd2\x1a p\x07h\xb9f\xeb\xdeHA\xa3\xa9\x93R\xfd\x06\x17\xa9\xba\x15\xf6Q\x83\'\x0eU\xf8\xfd\xc0\xef\xee\xeb\xf3J\x1c;\xb5\xda\x13\n&\xfc\x17\x909\xf3i\xdd\xde\x8d\xa3\xf2\xdb\x04N\xbc\x19\xf7\x7fK|6H\\=\xb9u\xfbR\xb1\xa6x\x18\xfbP\xbek5\x85D\x1b\xe7\xb7\xe9A:\xb6\x93\xf7XM\xa8\x00\\i\xdb\x8c\xb6\xa6-\x1b\xfe\xd4\x90\xf4\x8c\xd5@\xba-\xacq\x8d\x05\\\x87\xfbS\x1aS^\xaa\xa8\xf5\xf6\xa6\xe2\x92\xdb\x0b\xf6\xa6\xe1\xd2]\xc6I`\xd2z\x8b@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Thu, 27 Nov 2025 00:17:35 GMT'), total consumed 24 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', b'0-173/*'), total consumed 8 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a4d718028f5f266-GRU'), total consumed 23 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 29, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 34, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'content-location', b'/dispositivos?select=mac_address%2Cstatus%2Ctipo'), total consumed 36 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x7dce1a8f3340>), total consumed 17 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 25, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ac2ac-2c20-7789-a6c7-56d7ef3ef820'), total consumed 38 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x7dce1a8f3400>), total consumed 19 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', b'182'), total consumed 26 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 213, consumed 2 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=Jbf0z1CPI5_EIY5JhK.89ZRoR2Aplc7ZKA_4i4NQLfU-1764202655-1.0.1.1-NSvZxEKH_GfNGtWBpiv4s4c1E1R2WKkvdA0Mkitn.ja18mB1.QlEIUWpwZE7ZSDgf1FSPu1i2_5weW0YY47SyiMXur2ckU3zDN5UQdeFqWk; path=/; expires=Thu, 27-Nov-25 00:47:35 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 216 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 21:17:35] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
+[2025-11-26 21:17:35] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Thu, 27 Nov 2025 00:17:35 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'0-173/*'), (b'cf-ray', b'9a4d718028f5f266-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'content-location', b'/dispositivos?select=mac_address%2Cstatus%2Ctipo'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ac2ac-2c20-7789-a6c7-56d7ef3ef820'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'182'), (b'set-cookie', b'__cf_bm=Jbf0z1CPI5_EIY5JhK.89ZRoR2Aplc7ZKA_4i4NQLfU-1764202655-1.0.1.1-NSvZxEKH_GfNGtWBpiv4s4c1E1R2WKkvdA0Mkitn.ja18mB1.QlEIUWpwZE7ZSDgf1FSPu1i2_5weW0YY47SyiMXur2ckU3zDN5UQdeFqWk; path=/; expires=Thu, 27-Nov-25 00:47:35 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
+[2025-11-26 21:17:35] [INFO    ] [httpx] : HTTP Request: GET https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo "HTTP/2 200 OK"
+[2025-11-26 21:17:35] [INFO    ] [httpx] : HTTP Request: GET https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo "HTTP/2 200 OK"
+[2025-11-26 21:17:35] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 21:17:35] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
+[2025-11-26 21:17:35] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
+[2025-11-26 21:17:35] [DEBUG   ] [httpcore.http2] : response_closed.complete
+[2025-11-26 21:17:35] [INFO    ] [SimulationManager] : Estados sincronizados via Supabase.
+[2025-11-26 21:17:35] [INFO    ] [SimulationManager] : Estados sincronizados via Supabase.
+[2025-11-26 21:17:35] [INFO    ] [SimulationManager] : Iniciando Simulação [STATIC] (api)...
+[2025-11-26 21:17:35] [INFO    ] [SimulationManager] : Iniciando Simulação [STATIC] (api)...
+[2025-11-26 21:17:46] [INFO    ] [TrafficController] : Modo Estático: Ciclos de Minutos (Dependência R/G).
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:37633 [Errno 111] Connection refused
+ Retrying in 1 seconds
+[2025-11-26 21:17:46] [INFO    ] [TrafficController] : Modo Estático: Ciclos de Minutos (Dependência R/G).
+[2025-11-26 22:10:53] [INFO    ] [SimulationManager] : Tickets gerados: /mnt/c/UNIP/sumo-beck/output/api_simulation_tickets.json
+[2025-11-26 22:10:53] [INFO    ] [SimulationManager] : Tickets gerados: /mnt/c/UNIP/sumo-beck/output/api_simulation_tickets.json
 ----------------------------------------------------------------
-[2025-11-24 03:28:06] [DEBUG   ] [ShellScript  ] : INICIO: Gerando Dashboard Logs...
-[2025-11-24 03:28:06] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.traffic_analyzer --source logs
-[2025-11-24 03:28:10] [INFO    ] [TrafficAnalyzer] : Gerando Dashboard Logs...
-[2025-11-24 03:28:10] [INFO    ] [TrafficAnalyzer] : Gerando Dashboard Logs...
-[2025-11-24 03:28:11] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
-----------------------------------------------------------------
-[2025-11-24 05:10:19] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
-[2025-11-24 05:10:19] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
-[2025-11-24 05:10:38] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (UPDATED) ===
-[2025-11-24 05:10:38] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (UPDATED) ===
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x74251421d720>
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x742514200fc0> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x74251421d6f0>
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'DELETE']>
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'DELETE') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 2 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 6 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?mac_address=neq.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 28 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'prefer', b'return=representation') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 15 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'content-length', b'2') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 28 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 1 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Adding (b'content-type', b'application/json') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 31 with 6 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Encoded header block to b"B\x86\xbf\x83>\r\xf8?A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed'\x85\xd1mc\x8ch*\xe4?\x87D\x9cb\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe5#$C\x92K\n\x84AQ{.\x0fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.'\x97\x0f@\x85\xae\xc2\xca[?\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?\\\x81\x17_\x8b\x1du\xd0b\r&=LtA\xea"
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : send_request_body.complete
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x96\xd0z\xbe\x94\x13Ji?u\x04\x016\xa0\x1e\xb8\x10\\i\xa51h\xdf_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x03*/*@\x85$\xabX?_\x8f|l\xba\xe1]|\x85\x10D\xf4m\xad\x8bo\x0f@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xabx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8d\xae\xc2\xca[\x0bQ\n\xb0\xeb\xae\x83\x16O\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x99\x00_\x1cm\x14k4\xf0\x84\xb3\xa2)\x16xN\x95h\xe3y\xa8\xe3\x90L\x94#@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x0225w\xffX\x8a"K\x14t\xc1\x17\xac\xfaO\xdf\xdc@\xaf\xc7>\xf6\x1b%|;O\xd8\x9a\x90\x8f\x1es\xfe\xa7\xb6\xff\xdey\xdd\xcdxqi\xa3b\xc1u\xc6_t/4\xd2\xc1\\\x0b\x85p\xac4\x1a\xae\x93\x8f\'\xeem\x96~\x81\x1a\xddz\x9f\x1e\xa8\xafg\xee\xfe\x1d\x9e\x97\x94y\x92\x07\xf2\xcd7y\xfa#\xc7n\\xb\xdb\xefv\x8f\xde\xf9Zo\xf3.:\x99\xb7\xd6\xffq\xe5\x97\x81\xb5\xed\xd8_M\xca&\xecGD\xe6\xd1\xe2N\xde|Y+/^\xcf\x8c\xda\xba\x16<\xa2{\xedJ\xc6\x99\xe0c\xedB\xf9\xac\xd6\x15\x10h=_J\t\xa5\xb4\x9f\xba\xc2m@=q\xa0\\i\xa51h\xdf\xf6\xa4\x87\xa4f\xaa\x05\xd1mc\x8ch*\xe4?\xda\x98\xd2\x9a\xf5UG\xaf\xb57\x14\x96\xd8_\xb57\x0e\x92\xee2K\x06\x93\xd4_@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Mon, 24 Nov 2025 08:10:44 GMT'), total consumed 24 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', <memory at 0x7425141cd000>), total consumed 5 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a376e79ce2128b5-GRU'), total consumed 23 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'preference-applied', b'return=representation'), total consumed 31 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x7425141ccf40>), total consumed 17 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 25, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ab4ea-4822-72ec-827e-bb84bbd23e1a'), total consumed 38 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x7425141cd180>), total consumed 19 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', <memory at 0x7425141cd240>), total consumed 26 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 215, consumed 2 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=_yLNovz_0pwYvriIpUqhqcOsswxLZtqTZYL7KCa_NlQ-1763971844-1.0.1.1-asinjhaIZKQrZ0sP78mwylpQZTUq8fWbKt09JggvhjswqWVUGRzSMZvJ45XJHn3uyTzbJfUiPRQey5f25rsjtKMwdqxwrf38CLHiOjebJ28; path=/; expires=Mon, 24-Nov-25 08:40:44 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 218 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:10:42] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Mon, 24 Nov 2025 08:10:44 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'*/*'), (b'cf-ray', b'9a376e79ce2128b5-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'preference-applied', b'return=representation'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ab4ea-4822-72ec-827e-bb84bbd23e1a'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'25'), (b'set-cookie', b'__cf_bm=_yLNovz_0pwYvriIpUqhqcOsswxLZtqTZYL7KCa_NlQ-1763971844-1.0.1.1-asinjhaIZKQrZ0sP78mwylpQZTUq8fWbKt09JggvhjswqWVUGRzSMZvJ45XJHn3uyTzbJfUiPRQey5f25rsjtKMwdqxwrf38CLHiOjebJ28; path=/; expires=Mon, 24-Nov-25 08:40:44 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
-[2025-11-24 05:10:42] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 05:10:42] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
-[2025-11-24 05:10:42] [DEBUG   ] [httpcore.http2] : response_closed.complete
->>> 📡 Sync API -> Supabase...
-📂 Processando 87 dispositivos...
-✅ SUCESSO! 174 registros sincronizados.
-[2025-11-24 05:12:12] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 05:12:12] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 05:12:12] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
-----------------------------------------------------------------
-[2025-11-24 05:12:41] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
-[2025-11-24 05:12:41] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
-[2025-11-24 05:12:46] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (DYNAMIC MAP) ===
-[2025-11-24 05:12:46] [INFO    ] [ScenarioGeneratorAPI] : === GERAÇÃO API (DYNAMIC MAP) ===
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7c90cdd296f0>
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x7c90cdd08f40> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7c90cdd296c0>
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'DELETE']>
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'DELETE') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 2 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 6 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?mac_address=neq.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 28 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'prefer', b'return=representation') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 15 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'content-length', b'2') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 28 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 1 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Adding (b'content-type', b'application/json') to the header table, sensitive:False, huffman:True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 31 with 6 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Encoded header block to b"B\x86\xbf\x83>\r\xf8?A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed'\x85\xd1mc\x8ch*\xe4?\x87D\x9cb\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe5#$C\x92K\n\x84AQ{.\x0fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.'\x97\x0f@\x85\xae\xc2\xca[?\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?\\\x81\x17_\x8b\x1du\xd0b\r&=LtA\xea"
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : send_request_body.complete
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x96\xd0z\xbe\x94\x13Ji?u\x04\x016\xa0\x1e\xb8\x11\\i\xe51h\xdf_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x03*/*@\x85$\xabX?_\x8f|l\xba\xe8^\x08cp\x01\x13\xc4[\x16\xde\x1f@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xabx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8d\xae\xc2\xca[\x0bQ\n\xb0\xeb\xae\x83\x16O\x8f\xb0\xa9\xb6\xca\xa0\xb0\xb5\xd8T\x16\xa4\x8d&=_@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x9a\x00_\x1cm\x14\x8b\x08\x91\xb8\xb3\xad\xbeU\x9f\x960,\xdb\xad\x01\xc7\xdafVF\x0f@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x0239w\xffW\x8a"K\x14t\xc0Or\xc3\xbb\xcfM\xd97v\xb3\x0f\x9fD\xbf\xdc\xd0\xb3*\xff\xa8\x97\x8e\x0e\xdf\x87\xf1\xd3}\xf6\xd2}\xbb\xf8a\xea\xb0]q\x97\xdd\x0b\xee<\xb0W\x02\xe1\\+\x1b]W\xb0\x82\x9eRg\xab_\xa6\xfc\xeb\x9d\xeeZ\xec\xe7\xe8\xee\xdf\xc4\x1e\x8d\xfe\xe2+6\xfb\xca\x0b\xfd\xefg$\xae\xcf\x86L\xef\x9b\xc39\xdcz{\xf1M@M\xcf>\xb9o\x12~\xb0\xb4S\xf0\x96;1\xa7\xbe\x08l\xe9\xda\xf3\xc7\xe3\xb1\x1b\xe8\xc8\xf4\xfd#\xdb2\xe5\xfck\x87\xda\x95\x8d3\xc0\xc7\xda\x85\xf3Y\xac* \xd0z\xbe\x94\x13Ki?u\x84\xda\x80z\xe3B\xb8\xd3\xcab\xd1\xbf\xedI\x0fH\xcdT\x0b\xa2\xda\xc7\x18\xd0U\xc8\x7f\xb51\xa55\xea\xaa\x8f_jn)-\xb0\xbfjn\x1d%\xdcd\x96\r\'\xa8\xbf@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Mon, 24 Nov 2025 08:12:48 GMT'), total consumed 24 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', <memory at 0x7c90cdcd50c0>), total consumed 5 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a3771811b60128c-GRU'), total consumed 23 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'preference-applied', b'return=representation'), total consumed 31 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x7c90cdcd5000>), total consumed 17 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ab4ec-2cb6-759e-9fb0-57406943f3a0'), total consumed 39 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x7c90cdcd5240>), total consumed 19 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', <memory at 0x7c90cdcd5300>), total consumed 26 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 214, consumed 2 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=czfASxjSISqrFxycDviA3f.ZsfVEqXowjTD5toRTUFk-1763971968-1.0.1.1-iPnCF0mWdLnPy5xPh8WPrYyo7DG1j5ZGe3uzJ0DvCLcf7hFdL9iw3L68hD_gl1iYLPfCchkA4eoUfbrHtvEArjqC8oVQsTlI8hjbRg.eX4U; path=/; expires=Mon, 24-Nov-25 08:42:48 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 217 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
-[2025-11-24 05:12:47] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Mon, 24 Nov 2025 08:12:48 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'*/*'), (b'cf-ray', b'9a3771811b60128c-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'preference-applied', b'return=representation'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ab4ec-2cb6-759e-9fb0-57406943f3a0'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'39'), (b'set-cookie', b'__cf_bm=czfASxjSISqrFxycDviA3f.ZsfVEqXowjTD5toRTUFk-1763971968-1.0.1.1-iPnCF0mWdLnPy5xPh8WPrYyo7DG1j5ZGe3uzJ0DvCLcf7hFdL9iw3L68hD_gl1iYLPfCchkA4eoUfbrHtvEArjqC8oVQsTlI8hjbRg.eX4U; path=/; expires=Mon, 24-Nov-25 08:42:48 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
-[2025-11-24 05:12:47] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 05:12:47] [INFO    ] [httpx] : HTTP Request: DELETE https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?mac_address=neq.0 "HTTP/2 200 OK"
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'DELETE']> stream_id=1
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
-[2025-11-24 05:12:47] [DEBUG   ] [httpcore.http2] : response_closed.complete
-[2025-11-24 05:13:51] [INFO    ] [ScenarioGeneratorAPI] : Mapa copiado para: /mnt/c/UNIP/site-web/public/maps
-[2025-11-24 05:13:51] [INFO    ] [ScenarioGeneratorAPI] : Mapa copiado para: /mnt/c/UNIP/site-web/public/maps
->>> 📡 Sync API -> Supabase...
-📂 Processando 174 dispositivos...
-⚠️ Nenhum dispositivo para sincronizar.
-[2025-11-24 05:14:01] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 05:14:01] [INFO    ] [ScenarioGeneratorAPI] : === SUCESSO ===
-[2025-11-24 05:14:02] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO
-----------------------------------------------------------------
-[2025-11-24 05:21:00] [DEBUG   ] [ShellScript  ] : INICIO: Gerando API...
-[2025-11-24 05:21:00] [DEBUG   ] [ShellScript  ] : CMD: python3 -m tcc_sumo.tools.scenario_generator_api --input dados_api.json --vehicles 1000 --duration 3600
+[2025-11-26 22:53:29] [DEBUG   ] [ShellScript  ] : INICIO: Simulando API (Static)...
+[2025-11-26 22:53:29] [DEBUG   ] [ShellScript  ] : CMD: python3 -m main --scenario api --mode STATIC --target-tl-id ''
+[2025-11-26 22:53:48] [DEBUG   ] [httpcore.connection] : connect_tcp.started host='rumhqljidmwkctjojqdw.supabase.co' port=443 local_address=None timeout=120 socket_options=None
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.connection] : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x70e0884f4820>
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.connection] : start_tls.started ssl_context=<ssl.SSLContext object at 0x70e0884d8c40> server_hostname='rumhqljidmwkctjojqdw.supabase.co' timeout=120
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.connection] : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x70e0884f47f0>
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_connection_init.started request=<Request [b'GET']>
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_connection_init.complete
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_request_headers.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b':method', b'GET') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 2 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b':authority', b'rumhqljidmwkctjojqdw.supabase.co') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 1 with 6 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 24 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b':scheme', b'https') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 7 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b':path', b'/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 4 with 6 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 39 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'accept', b'*/*') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 19 with 6 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 3 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'accept-encoding', b'gzip, deflate') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 16 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'user-agent', b'python-httpx/0.28.1') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 58 with 6 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 14 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'x-client-info', b'supabase-py/2.24.0') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 13 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'apikey', b'sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 36 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'authorization', b'Bearer sb_publishable_KYQSvBlqUw9hrC0zeB-3Tg_SIdo84So') to the header table, sensitive:True, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 23 with 4 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 41 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'accept-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 10 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Adding (b'content-profile', b'public') to the header table, sensitive:False, huffman:True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 11 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoding 5 with 7 bits
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Encoded header block to b'\x82A\x98\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x85\xd1mc\x8ch*\xe4?\x87D\xa7b\xc2\xa1,w\x0b\x12\x19\x15\x9d\x06I\xbb\x9d\x1f\xe2\x0bAH\x98)\x19"\x1c\x92XT!Q^BF\x9bP\xa8\xaf$\xd5\x9fS\x83\xf9c\xe7\x90z\x8e\xaf\xd2g=KN\x94\xd7\xe5\x80.\'\x97\x0f@\x8a\xf2\xb1(1jJ\xc6\xaaS\xff\x8dE\xb5\x8e1\xa0\xabW\xe9\x81.&\x97\x07@\x85\x1df\xea__\xa4DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff\x1f\x08\xa9\xbaQ\xd8[\x14DqWlt\x19\x13\x8e:\x0b\x16n{7w\xbbGn\x1e\x1f\x9e\xcb\xc0\xf6[\xab3\xbeh\xb7d\x90\xef5\xb8\xff@\x8a\x19\x08Z\xd2\xb5v\x1eSP_\x85\xae\xd8\xe81?@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?'
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_request_headers.complete
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_request_body.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : send_request_body.complete
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_response_headers.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_remote_settings.started
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_remote_settings.complete return_value=<RemoteSettingsChanged changed_settings:{ChangedSetting(setting=SettingCodes.MAX_CONCURRENT_STREAMS, original_value=None, new_value=100), ChangedSetting(setting=SettingCodes.INITIAL_WINDOW_SIZE, original_value=65535, new_value=65536), ChangedSetting(setting=SettingCodes.MAX_FRAME_SIZE, original_value=16384, new_value=16777215)}>
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoding b'?\xe1\x1f\x88a\x97\xdf=\xbfJ\t\xd54\x9f\xba\x82\x00\x9bP\x01\xb8\xdb7\x1a}LZ7\xff_\x96\x1du\xd0b\r&=LtA\xea\xfbP\x93\x8e\xc4\x150Z\x99V{v\x87%\x07\xb6Ih\x1d\x85^\x86\x02\xc1u\x96>\x7f@\x85$\xabX?_\x8f|mI)]pq\x94R\x85\xf2\xad\x8bo\x0f@\x8a$\xab\x10d\x9c\xab!#M\xa8\x86\xbf\xcfL:2^Z\x83\x9b\xd9\xab]\xa2bC"\xb3\xa0\xc97s\xa3\xfcAh)\x13\x05#$C\x92K\n\x84*+\xc8H\xd3j\x15\x15\xe4\x9a\xb3\xffx\xa0\xa4~V\x1c\xc5\x81\x90\xb6\xcb\x80\x00>\xd45D\xa2\xd9\x0b\xba\xd8\xef\x9e\x91\x9a\xa4}\xa9]\x85\xa0\xe3\x93{\x8b\x84\x84-i[\x05D<\x86\xaao@\x8b!\xeaIjJ\xd5\xd8yMA\x7f\x85\xae\xd8\xe81?@\x8dDkL4\x97\xc0\xfd-\xdc\xb6 \xc7\xab\x011@\x8aDkWa\xfa\x14\x89Z\xc2\xcb\x90\xb2\xdag\xedGCIO\x8e\xa4OC\xf4\xed\'\x8f@\x8aDkX^\xd6\x95\tX\xd2\x7f\x9a\x00_\x19\x19\x03K4\xe3N,\xec\x81ig\x9b\x18V\x10\x99#n\x91\xb0\xb2\xd4\x9f@\x90\xf2\xb1\x0fRKRVO\xaa\xca\xb1\xebI\x8fR?\x85\xa8\xe8\xa8\xd2\xcb@\x8f\xf2\xb1j\xee\x7fK\r)-5\xa5b\x1e\xda\x93\x011@\x95\xf2\xb1j\xee\x7fK[Z\x13aGJ\xc8-\x9d\xccB\xac\x93R_\x0222w\xffW\x8a"K\x14t\xc1\x0fIb\xce]\x9e\xb9.N\xf1\x8b\x17\nj\x90\xfa&\xec\xcf^%.\xd7\xf0\x07\xa5?\x93f\xe3\x1d\x17|\xc2\xb0]q\xa1\x01\xe6\x84\xfa\xc1\\\x0b\x85p\xad\xc7\xce\xcfyy\x80\x0edx}/\x86?\xdf\xc9?7z\xeb\x96?h\x1d3\xee\xbe\xce\x0c\xe4\x0fN\x98\x82^S\xe5\xbb\xef\xa7\x89\xb1e\xa3\xdfV\xe7~On/Jz\xeeGA\xf8\xbc\xe8\xf9\x136\xb9\xbb\xfb\xdd\xa76\xdc\x14;\xbepk\xef\x7f\x97\xed\x14n\x85w\xe60\x0f\x9f\xc7\xda\x95\x8d3\xc0\xc7\xda\x85\xf3Y\xac* \xdf=\xbfJ\t\xd5\xb4\x9f\xba\xc2m@\n\xe0\x99\xb8\xd3\xeab\xd1\xbf\xedI\x0fH\xcdT\x0b\xa2\xda\xc7\x18\xd0U\xc8\x7f\xb51\xa55\xea\xaa\x8f_jn)-\xb0\xbfjn\x1d%\xdcd\x96\r\'\xa8\xbf@\x85\x1d\tY\x1d\xc9\x90\x9d\x98?\x9b\x8d4\xcf\xf3\xf6\xa5#\x81\xe7\x1a\x00?'
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 4096, consumed 3 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.table] : Resizing header table to 4096 from 4096
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 8, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b':status', b'200'), consumed 1
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 33, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 23, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'date', b'Thu, 27 Nov 2025 01:53:49 GMT'), total consumed 25 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 31, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 22, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'content-type', b'application/json; charset=utf-8'), total consumed 24 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 54, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 7, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'server', b'cloudflare'), total consumed 9 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 30, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'content-range', b'0-173/*'), total consumed 8 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-ray', b'9a4dfe76abe2f19e-GRU'), total consumed 23 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 6, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'cf-cache-status', b'DYNAMIC'), total consumed 19 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 3, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'content-encoding', b'gzip'), total consumed 5 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 29, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 34, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'content-location', b'/dispositivos?select=mac_address%2Cstatus%2Ctipo'), total consumed 36 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 56, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 32, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), total consumed 34 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 59, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'vary', b'Accept-Encoding'), total consumed 13 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 11, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'content-profile', b'public'), total consumed 19 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 13, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-gateway-version', <memory at 0x70e088557340>), total consumed 17 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), total consumed 29 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 10, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 26, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'sb-request-id', b'019ac304-4646-7d14-85a1-223c57c5134d'), total consumed 39 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'x-content-type-options', b'nosniff'), total consumed 24 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 15, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 1, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-attempt-count', <memory at 0x70e088557400>), total consumed 19 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 21, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 2, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'x-envoy-upstream-service-time', <memory at 0x70e0885574c0>), total consumed 26 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 55, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 214, consumed 2 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'set-cookie', b'__cf_bm=Ajf_LeQyW.cvb2GUmndoMgq3kVeeR9E1jmXgKVblBxA-1764208429-1.0.1.1-VxQzJY006I8ajD1bZXdXSykJbzsamhSD3ELc1jjG1eWhJBzjwgGJlzk5h9dz6.mtkSsjawC7aWcKPgvzSNKREl7Th0PvDWZllSA.9gi0oLw; path=/; expires=Thu, 27-Nov-25 02:23:49 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), total consumed 217 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 5, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded 16, consumed 1 bytes
+[2025-11-26 22:53:49] [DEBUG   ] [hpack.hpack] : Decoded (b'alt-svc', b'h3=":443"; ma=86400'), total consumed 24 bytes, indexed True
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_response_headers.complete return_value=(200, [(b'date', b'Thu, 27 Nov 2025 01:53:49 GMT'), (b'content-type', b'application/json; charset=utf-8'), (b'server', b'cloudflare'), (b'content-range', b'0-173/*'), (b'cf-ray', b'9a4dfe76abe2f19e-GRU'), (b'cf-cache-status', b'DYNAMIC'), (b'content-encoding', b'gzip'), (b'content-location', b'/dispositivos?select=mac_address%2Cstatus%2Ctipo'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'vary', b'Accept-Encoding'), (b'content-profile', b'public'), (b'sb-gateway-version', b'1'), (b'sb-project-ref', b'rumhqljidmwkctjojqdw'), (b'sb-request-id', b'019ac304-4646-7d14-85a1-223c57c5134d'), (b'x-content-type-options', b'nosniff'), (b'x-envoy-attempt-count', b'1'), (b'x-envoy-upstream-service-time', b'22'), (b'set-cookie', b'__cf_bm=Ajf_LeQyW.cvb2GUmndoMgq3kVeeR9E1jmXgKVblBxA-1764208429-1.0.1.1-VxQzJY006I8ajD1bZXdXSykJbzsamhSD3ELc1jjG1eWhJBzjwgGJlzk5h9dz6.mtkSsjawC7aWcKPgvzSNKREl7Th0PvDWZllSA.9gi0oLw; path=/; expires=Thu, 27-Nov-25 02:23:49 GMT; domain=.supabase.co; HttpOnly; Secure; SameSite=None'), (b'alt-svc', b'h3=":443"; ma=86400')])
+[2025-11-26 22:53:49] [INFO    ] [httpx] : HTTP Request: GET https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo "HTTP/2 200 OK"
+[2025-11-26 22:53:49] [INFO    ] [httpx] : HTTP Request: GET https://rumhqljidmwkctjojqdw.supabase.co/rest/v1/dispositivos?select=mac_address%2Cstatus%2Ctipo "HTTP/2 200 OK"
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_response_body.started request=<Request [b'GET']> stream_id=1
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : receive_response_body.complete
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : response_closed.started stream_id=1
+[2025-11-26 22:53:49] [DEBUG   ] [httpcore.http2] : response_closed.complete
+[2025-11-26 22:53:49] [INFO    ] [SimulationManager] : Estados sincronizados via Supabase.
+[2025-11-26 22:53:49] [INFO    ] [SimulationManager] : Estados sincronizados via Supabase.
+[2025-11-26 22:53:49] [INFO    ] [SimulationManager] : Iniciando Simulação [STATIC] (api)...
+[2025-11-26 22:53:49] [INFO    ] [SimulationManager] : Iniciando Simulação [STATIC] (api)...
+[2025-11-26 22:53:58] [INFO    ] [TrafficController] : Modo Estático: Ciclos de Minutos (Dependência R/G).
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:46615 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:46615 [Errno 111] Connection refused
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:46615 [Errno 111] Connection refused
+ Retrying in 1 seconds
+[2025-11-26 22:53:58] [INFO    ] [TrafficController] : Modo Estático: Ciclos de Minutos (Dependência R/G).
+[2025-11-26 22:55:15] [INFO    ] [SimulationManager] : Tickets gerados: /mnt/c/UNIP/sumo-beck/output/api_simulation_tickets.json
+[2025-11-26 22:55:15] [INFO    ] [SimulationManager] : Tickets gerados: /mnt/c/UNIP/sumo-beck/output/api_simulation_tickets.json
+[2025-11-26 22:55:15] [DEBUG   ] [ShellScript  ] : FIM: SUCESSO

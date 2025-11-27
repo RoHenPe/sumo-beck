@@ -1,72 +1,64 @@
-import json
 import os
+import json
+import sys
 from pathlib import Path
-from dotenv import load_dotenv
-from supabase import create_client, Client
+from supabase import create_client
 
-# Resolve .env na raiz (tcc_sumo/)
-project_root = Path(__file__).resolve().parents[1]
-env_path = project_root / ".env"
-load_dotenv(dotenv_path=env_path)
+# Obtém credenciais do ambiente (passadas pelo script principal)
+SB_URL = os.getenv("SUPABASE_URL")
+SB_KEY = os.getenv("SUPABASE_KEY")
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+# Se não vier do ambiente, tenta carregar do .env.local como fallback
+if not SB_URL or not SB_KEY:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parents[2] / "site-web" / ".env.local")
+    SB_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
+    SB_KEY = os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY")
 
-def sync_devices():
-    print(">>> 📡 Sync API -> Supabase...")
-    
-    if not SUPABASE_URL or not SUPABASE_KEY:
-        print("❌ Credenciais não encontradas no .env")
-        return
+if not SB_URL or not SB_KEY:
+    print("ERRO: Credenciais Supabase não encontradas em sync_db.py")
+    sys.exit(1)
 
-    manifest_path = project_root / "output" / "api_devices_manifest.json"
-    
-    if not manifest_path.exists():
-        print(f"❌ Manifesto API não encontrado: {manifest_path}")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+MANIFEST_PATH = PROJECT_ROOT / "output" / "api_devices_manifest.json"
+
+def sync():
+    print("=== DB SYNC INICIADO ===")
+    if not MANIFEST_PATH.exists():
+        print(f"ERRO: Manifesto não encontrado: {MANIFEST_PATH}")
         return
 
     try:
-        supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+        print(f"Conectando ao Supabase...")
+        client = create_client(SB_URL, SB_KEY)
+        
+        with open(MANIFEST_PATH, 'r', encoding='utf-8') as f:
+            devices = json.load(f)
+            
+        print(f"Lendo {len(devices)} dispositivos do manifesto...")
+        
+        data_to_insert = []
+        for d in devices:
+            row = {
+                "mac_address": d["id"], 
+                "tipo": d["type"],
+                "latitude": d["geo"]["lat"],
+                "longitude": d["geo"]["lon"],
+                "status": d.get("status", "active"),
+                "sumo_id": d.get("sumo_id"),
+                "linked_mac": d.get("linked_to")
+            }
+            data_to_insert.append(row)
 
-        with open(manifest_path, 'r', encoding='utf-8') as f:
-            local_devices = json.load(f)
-
-        print(f"📂 Processando {len(local_devices)} dispositivos...")
-
-        rows = []
-        for dev in local_devices:
-            if dev.get('type') != 'traffic_control_unit': continue
-
-            rows.append({
-                "mac_address": dev['id'],
-                "tipo": "SEMAFARO",
-                "sumo_id": dev['sumo_id'],
-                "status": dev['status'],
-                "latitude": dev['geo']['lat'],
-                "longitude": dev['geo']['lon'],
-                "linked_mac": None
-            })
-
-            cam = dev.get('camera')
-            if cam:
-                rows.append({
-                    "mac_address": cam['id'],
-                    "tipo": "CAMERA",
-                    "sumo_id": None,
-                    "status": cam['status'],
-                    "latitude": dev['geo']['lat'],
-                    "longitude": dev['geo']['lon'],
-                    "linked_mac": dev['id']
-                })
-
-        if rows:
-            supabase.table("dispositivos").upsert(rows, on_conflict="mac_address").execute()
-            print(f"✅ SUCESSO! {len(rows)} registros sincronizados.")
+        if data_to_insert:
+            print(f"Tentando inserir {len(data_to_insert)} registros...")
+            client.table("dispositivos").upsert(data_to_insert, on_conflict="mac_address").execute()
+            print("SUCESSO! Dados sincronizados.")
         else:
-            print("⚠️ Nenhum dispositivo para sincronizar.")
+            print("Nenhum dado para inserir.")
 
     except Exception as e:
-        print(f"❌ ERRO CRÍTICO: {e}")
+        print(f"ERRO CRÍTICO DURANTE SYNC: {e}")
 
 if __name__ == "__main__":
-    sync_devices()
+    sync()

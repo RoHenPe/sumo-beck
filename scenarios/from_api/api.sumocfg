@@ -1,0 +1,1 @@
+<configuration><input><net-file value="api.net.xml"/><route-files value="api.rou.xml"/><additional-files value="detectors.add.xml"/><gui-settings-file value="gui-settings.xml"/></input><time><begin value="0"/><end value="3600"/></time></configuration>
